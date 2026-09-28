@@ -11,7 +11,7 @@
 }
 
 .footer-copy {
-  font-size: 0.82rem;
+  font-size: var(--fs-nav);
   color: var(--paper-dim);
   text-align: center;
 }

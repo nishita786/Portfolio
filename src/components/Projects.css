@@ -1,7 +1,7 @@
 .projects-heading {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-  font-weight: 500;
+  font-size: var(--fs-section);
+  font-weight: 600;
   letter-spacing: -0.02em;
   color: #fff;
   margin-bottom: 2.5rem;
@@ -41,7 +41,7 @@
 }
 
 .project-index {
-  font-size: 0.72rem;
+  font-size: var(--fs-eyebrow);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--cyan);
@@ -51,8 +51,8 @@
 
 .project-header h3 {
   font-family: var(--font-display);
-  font-size: clamp(1.55rem, 3vw, 2rem);
-  font-weight: 500;
+  font-size: var(--fs-card);
+  font-weight: 600;
   color: #fff;
   margin-bottom: 0.3rem;
 }
@@ -63,7 +63,7 @@
 
 .project-subtitle {
   color: var(--ice-muted);
-  font-size: 0.95rem;
+  font-size: var(--fs-body-sm);
   font-weight: 300;
 }
 
@@ -76,7 +76,7 @@
   border-radius: 50%;
   border: 1px solid var(--line);
   color: var(--ice-dim);
-  font-size: 1.15rem;
+  font-size: var(--fs-lead);
   transition:
     color 0.2s ease,
     border-color 0.2s ease,
@@ -102,7 +102,7 @@
   padding-left: 1rem;
   color: var(--ice-muted);
   font-weight: 300;
-  font-size: 0.94rem;
+  font-size: var(--fs-body-sm);
   line-height: 1.65;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .project-stack li {
-  font-size: 0.68rem;
+  font-size: var(--fs-caption);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cyan);

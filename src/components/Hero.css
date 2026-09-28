@@ -48,8 +48,8 @@
 }
 
 .hero-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.42em;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.36em;
   text-transform: uppercase;
   color: var(--paper-muted);
   font-weight: 500;
@@ -57,25 +57,25 @@
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(3.6rem, 11vw, 6.4rem);
-  font-weight: 500;
+  font-size: var(--fs-display);
+  font-weight: 600;
   letter-spacing: -0.03em;
-  line-height: 0.95;
+  line-height: 1.02;
   color: var(--paper);
   text-shadow: 0 10px 36px rgba(0, 0, 0, 0.55);
 }
 
 .hero-title--intro {
-  font-size: clamp(2.6rem, 7vw, 4.6rem);
-  line-height: 1.08;
+  font-size: var(--fs-hero);
+  line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 .hero-role {
   min-height: 1.6em;
-  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  font-size: var(--fs-lead);
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: var(--accent);
   text-shadow: none;
 }
@@ -117,10 +117,10 @@
 }
 
 .hero-desc {
-  font-size: clamp(0.88rem, 1.5vw, 0.98rem);
+  font-size: var(--fs-body-sm);
   font-weight: 300;
   line-height: 1.65;
-  color: rgba(230, 242, 255, 0.78);
+  color: var(--paper-muted);
   max-width: 34ch;
 }
 
@@ -134,7 +134,7 @@
   border-radius: 999px;
   background: linear-gradient(180deg, #f4eee3 0%, #e4d2b4 55%, #c9a66b 100%);
   color: #1a140c;
-  font-size: 0.78rem;
+  font-size: var(--fs-button);
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -196,7 +196,7 @@
 }
 
 .hero-nav-label {
-  font-size: 0.68rem;
+  font-size: var(--fs-caption);
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-weight: 600;
@@ -246,7 +246,7 @@
   background: rgba(10, 11, 13, 0.55);
   border: 1px solid rgba(220, 200, 170, 0.18);
   color: var(--paper);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   backdrop-filter: blur(8px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   animation: bounce-hint 2.4s ease-in-out infinite;
@@ -550,11 +550,11 @@
 
 @media (max-width: 560px) {
   .hero-title {
-    font-size: clamp(2.8rem, 14vw, 3.8rem);
+    font-size: clamp(2.4rem, 11vw, 3.2rem);
   }
 
   .hero-title--intro {
-    font-size: clamp(2.1rem, 10vw, 2.9rem);
+    font-size: clamp(2rem, 9vw, 2.75rem);
   }
 
   .hero-nav {

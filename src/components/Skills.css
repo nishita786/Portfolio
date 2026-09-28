@@ -1,7 +1,7 @@
 .skills-heading {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-  font-weight: 500;
+  font-size: var(--fs-section);
+  font-weight: 600;
   letter-spacing: -0.02em;
   color: #fff;
   margin-bottom: 0.75rem;
@@ -10,7 +10,7 @@
 .skills-lede {
   color: var(--ice-muted);
   font-weight: 300;
-  font-size: 1.02rem;
+  font-size: var(--fs-body);
   line-height: 1.6;
   max-width: 46ch;
   margin-bottom: 2.75rem;
@@ -23,7 +23,7 @@
 }
 
 .skills-group h3 {
-  font-size: 1rem;
+  font-size: var(--fs-body);
   font-weight: 500;
   color: rgba(230, 242, 255, 0.55);
   margin-bottom: 0.95rem;
