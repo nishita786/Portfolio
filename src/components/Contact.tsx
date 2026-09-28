@@ -6,9 +6,9 @@ const socials = [
   { label: 'Gmail', href: profile.links.email, mark: 'G' },
   { label: 'GitHub', href: profile.links.github, mark: '⌘' },
   { label: 'LinkedIn', href: profile.links.linkedin, mark: 'in' },
-  { label: 'X', href: profile.links.twitter, mark: '𝕏' },
   { label: 'LeetCode', href: profile.links.leetcode, mark: 'LC' },
-  { label: 'HackerRank', href: profile.links.hackerrank, mark: 'HR' },
+  { label: 'CodeChef', href: profile.links.codechef, mark: 'CC' },
+  { label: 'Solutions', href: profile.links.solutions, mark: '⌁' },
 ]
 
 export function Contact() {

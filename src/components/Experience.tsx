@@ -58,7 +58,7 @@ export function Experience() {
                 Specializing in Data Science with a focus on software engineering, algorithms, and
                 shipping production-minded systems.
               </li>
-              <li>Active on LeetCode and HackerRank, with ongoing practice on CodeChef.</li>
+              <li>Active on LeetCode and CodeChef, with solutions tracked on GitHub.</li>
             </ul>
           </motion.article>
         </div>

@@ -4,10 +4,10 @@ import './Statement.css'
 
 const platforms = [
   { label: 'LeetCode', href: profile.links.leetcode },
-  { label: 'HackerRank', href: profile.links.hackerrank },
   { label: 'CodeChef', href: profile.links.codechef },
   { label: 'GitHub', href: profile.links.github },
   { label: 'LinkedIn', href: profile.links.linkedin },
+  { label: 'Solutions', href: profile.links.solutions },
   { label: 'MVJCE', href: 'https://www.mvjce.edu.in/' },
 ]
 

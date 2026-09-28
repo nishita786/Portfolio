@@ -14,10 +14,9 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/nishita-kumari-profile',
     github: 'https://github.com/nishita786',
     email: 'mailto:nishitakm786@gmail.com',
-    twitter: 'https://x.com/nishitakm786',
     leetcode: 'https://leetcode.com/u/nishita786/',
-    hackerrank: 'https://www.hackerrank.com/nishita786',
     codechef: 'https://www.codechef.com/users/nishita786',
+    solutions: 'https://github.com/nishita786/leetcode-solutions',
   },
   education: {
     degree: 'B.E. Computer Science & Engineering',
@@ -93,9 +92,9 @@ export const profile = {
   },
   achievements: [
     { label: 'LeetCode', value: 'Active', detail: 'Problem solving', href: 'https://leetcode.com/u/nishita786/' },
-    { label: 'HackerRank', value: 'Certified', detail: 'Software Engineer', href: 'https://www.hackerrank.com/nishita786' },
+    { label: 'HackerRank', value: 'Practice', detail: 'Coding tracks', href: 'https://github.com/nishita786/leetcode-solutions' },
     { label: 'CodeChef', value: '★', detail: 'Competitive coding', href: 'https://www.codechef.com/users/nishita786' },
-    { label: 'DSA', value: 'Daily', detail: 'Practice habit', href: 'https://github.com/nishita786/leetcode-solutions' },
+    { label: 'DSA', value: 'Daily', detail: 'Solutions repo', href: 'https://github.com/nishita786/leetcode-solutions' },
   ],
 } as const
 
