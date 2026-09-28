@@ -6,21 +6,13 @@
 .footer-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-.footer-brand {
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.footer-brand span {
-  color: var(--cyan);
-}
-
 .footer-copy {
   font-size: 0.82rem;
-  color: var(--ice-dim);
+  color: var(--paper-dim);
+  text-align: center;
 }

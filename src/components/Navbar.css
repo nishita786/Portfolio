@@ -20,17 +20,6 @@
   gap: 1rem;
 }
 
-.nav-brand {
-  font-size: 1.05rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: #fff;
-}
-
-.nav-brand span {
-  color: var(--cyan);
-}
-
 .nav-links {
   display: flex;
   align-items: center;
@@ -41,14 +30,14 @@
   position: relative;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
-  color: rgba(230, 242, 255, 0.72);
+  color: var(--paper-muted);
   padding: 0.35rem 0;
   transition: color 0.2s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.is-active {
-  color: #fff;
+  color: var(--paper);
 }
 
 .nav-links a.is-active::after {
@@ -58,8 +47,12 @@
   right: 0;
   bottom: 0;
   height: 1.5px;
-  background: var(--cyan);
+  background: var(--accent);
   box-shadow: none;
+}
+
+.nav-home {
+  font-weight: 500;
 }
 
 .nav-cta {
