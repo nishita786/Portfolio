@@ -26,21 +26,6 @@ export function Projects() {
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.45, delay: i * 0.04 }}
             >
-              <a
-                className="project-media"
-                href={project.href}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Open ${project.name} on GitHub`}
-              >
-                <img
-                  src={project.image}
-                  alt={project.imageAlt}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </a>
-
               <header className="project-header">
                 <div>
                   <p className="project-index">{String(i + 1).padStart(2, '0')}</p>

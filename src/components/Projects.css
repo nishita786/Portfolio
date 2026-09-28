@@ -18,8 +18,7 @@
 }
 
 .project-card {
-  padding: 0;
-  overflow: hidden;
+  padding: 1.5rem 1.4rem 1.55rem;
   border-radius: 1.15rem;
   border: 1px solid var(--line);
   background: linear-gradient(145deg, rgba(16, 24, 48, 0.55), rgba(8, 12, 24, 0.25));
@@ -37,52 +36,12 @@
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
 }
 
-.project-media {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-  background: rgba(4, 8, 20, 0.9);
-  border-bottom: 1px solid rgba(64, 224, 208, 0.12);
-}
-
-.project-media::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 55%,
-    rgba(6, 10, 22, 0.35) 100%
-  );
-  pointer-events: none;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.project-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.01);
-  transition: transform 0.55s ease;
-}
-
-.project-card:hover .project-media img {
-  transform: scale(1.045);
-}
-
-.project-card:hover .project-media::after {
-  opacity: 0.35;
-}
-
 .project-header {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   align-items: flex-start;
-  margin: 1.25rem 1.4rem 1rem;
+  margin-bottom: 1rem;
 }
 
 .project-index {
@@ -139,7 +98,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
-  margin: 0 1.4rem 1.15rem;
+  margin-bottom: 1.15rem;
 }
 
 .project-points li {
@@ -168,7 +127,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
-  margin: 0 1.4rem 1.55rem;
 }
 
 .project-stack li {
@@ -182,15 +140,7 @@
 }
 
 @media (max-width: 640px) {
-  .project-header {
-    margin: 1.1rem 1.05rem 0.9rem;
-  }
-
-  .project-points {
-    margin: 0 1.05rem 1rem;
-  }
-
-  .project-stack {
-    margin: 0 1.05rem 1.3rem;
+  .project-card {
+    padding: 1.25rem 1.05rem 1.3rem;
   }
 }
