@@ -39,8 +39,7 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ delay: 0.05 }}
         >
-          Open to SDE, backend, and data roles — happy to bring your next idea to life, or just talk
-          systems.
+          Open to roles, projects, or a good chat about systems. Say hi.
         </motion.p>
 
         <motion.div
