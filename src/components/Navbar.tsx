@@ -17,10 +17,11 @@ export function Navbar({ activeSection }: NavbarProps) {
   return (
     <header className="nav">
       <div className="nav-inner">
+        <a href="#home" className="nav-brand" aria-label="nishita.dev home">
+          <span>{profile.brand}</span>
+          <span className="nav-brand-accent">{profile.brandAccent}</span>
+        </a>
         <nav className="nav-links" aria-label="Primary">
-          <a href="#home" className="nav-home" aria-label="Home">
-            Home
-          </a>
           {links.map((link) => (
             <a
               key={link.id}

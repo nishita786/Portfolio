@@ -5,7 +5,10 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-inner">
-        <p className="footer-copy">{profile.name}</p>
+        <p className="footer-copy">
+          <span>{profile.brand}</span>
+          <span className="footer-brand-accent">{profile.brandAccent}</span>
+        </p>
       </div>
     </footer>
   )

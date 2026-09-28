@@ -26,6 +26,19 @@
   gap: 1.6rem;
 }
 
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  flex-shrink: 0;
+}
+
+.nav-brand-accent {
+  color: var(--accent);
+}
+
 .nav-links a {
   position: relative;
   font-size: var(--fs-nav);
@@ -49,10 +62,6 @@
   height: 1.5px;
   background: var(--accent);
   box-shadow: none;
-}
-
-.nav-home {
-  font-weight: 500;
 }
 
 .nav-cta {
