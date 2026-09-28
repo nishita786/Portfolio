@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { heroSlides } from '../data/profile'
+import { heroRoles, heroSlides } from '../data/profile'
 import { Orb } from './Orb'
+import { Typewriter } from './Typewriter'
 import './Hero.css'
 
 const ease = [0.22, 1, 0.36, 1] as const
@@ -49,20 +50,31 @@ export function Hero({ mouseX, mouseY }: HeroProps) {
         <AnimatePresence mode="wait" custom={dir}>
           <motion.div
             key={active.id}
-            className="hero-copy"
+            className={`hero-copy${active.intro ? ' hero-copy--intro' : ''}`}
             custom={dir}
             initial={{ opacity: 0, filter: 'blur(14px)', y: 10 }}
             animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
             exit={{ opacity: 0, filter: 'blur(12px)', y: -6 }}
             transition={{ duration: 0.55, ease }}
           >
-            <p className="hero-label">{active.label}</p>
-            <h1 className="hero-title">{active.title}</h1>
-            <div className="hero-rule" aria-hidden="true" />
-            <p className="hero-desc">{active.description}</p>
-            <a className="hero-cta" href={active.target}>
-              {active.cta}
-            </a>
+            {active.intro ? (
+              <>
+                <h1 className="hero-title hero-title--intro">{active.title}</h1>
+                <p className="hero-role" aria-live="polite">
+                  <Typewriter phrases={heroRoles} />
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="hero-label">{active.label}</p>
+                <h1 className="hero-title">{active.title}</h1>
+                <div className="hero-rule" aria-hidden="true" />
+                <p className="hero-desc">{active.description}</p>
+                <a className="hero-cta" href={active.target}>
+                  {active.cta}
+                </a>
+              </>
+            )}
           </motion.div>
         </AnimatePresence>
       </motion.div>

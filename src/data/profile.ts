@@ -119,6 +119,13 @@ export const profile = {
   ],
 } as const
 
+export const heroRoles = [
+  'Front-end Developer',
+  'Back-end Developer',
+  'Artificial Intelligence',
+  'Problem Solver',
+] as const
+
 export type HeroSlide = {
   id: string
   label: string
@@ -130,19 +137,21 @@ export type HeroSlide = {
   hue: number
   /** Short side-peek label */
   peek: string
+  /** Minimal intro slide: greeting + typewriter only */
+  intro?: boolean
 }
 
 export const heroSlides: HeroSlide[] = [
   {
     id: 'about',
-    label: 'Profile',
-    title: 'Nishita',
+    label: '',
+    title: "Hi, I'm Nishita",
     peek: 'About',
-    description:
-      'CSE · Data Science at MVJCE. I craft backends, intelligent systems, and clean problem-solving — open to SDE and data roles.',
-    cta: 'Get Started',
+    description: '',
+    cta: '',
     target: '#about',
     hue: 190,
+    intro: true,
   },
   {
     id: 'work',

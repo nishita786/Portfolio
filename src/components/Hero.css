@@ -24,6 +24,10 @@
   pointer-events: auto;
 }
 
+.hero-copy--intro {
+  gap: 1rem;
+}
+
 .hero-label {
   font-size: 0.72rem;
   letter-spacing: 0.42em;
@@ -40,6 +44,48 @@
   line-height: 0.92;
   color: #fff;
   text-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.hero-title--intro {
+  font-size: clamp(2.8rem, 8vw, 5.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hero-role {
+  min-height: 1.6em;
+  font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--cyan);
+  text-shadow: 0 0 24px rgba(64, 224, 208, 0.35);
+}
+
+.typewriter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.typewriter-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.15em;
+  margin-left: 0.12rem;
+  background: var(--cyan);
+  box-shadow: 0 0 10px rgba(64, 224, 208, 0.7);
+  animation: caret-blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes caret-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .hero-rule {
@@ -115,11 +161,19 @@
   gap: 0.65rem;
   background: none;
   border: none;
+  outline: none;
   color: rgba(230, 242, 255, 0.55);
   cursor: pointer;
   transition:
     color 0.25s ease,
     transform 0.35s var(--ease-out);
+}
+
+.hero-peek:focus-visible {
+  color: #fff;
+  outline: 1.5px solid rgba(64, 224, 208, 0.7);
+  outline-offset: 6px;
+  border-radius: 999px;
 }
 
 .hero-peek:hover {
@@ -314,6 +368,10 @@
 @media (max-width: 560px) {
   .hero-title {
     font-size: clamp(3.4rem, 18vw, 4.8rem);
+  }
+
+  .hero-title--intro {
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
   }
 
   .hero-peek--left,

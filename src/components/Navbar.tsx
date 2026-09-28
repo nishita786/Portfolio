@@ -27,7 +27,7 @@ export function Navbar({ activeSection }: NavbarProps) {
             <a
               key={link.id}
               href={`#${link.id}`}
-              className={activeSection === link.id || (activeSection === 'home' && link.id === 'about') ? 'is-active' : undefined}
+              className={activeSection === link.id ? 'is-active' : undefined}
             >
               {link.label}
             </a>
