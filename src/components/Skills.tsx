@@ -39,16 +39,23 @@ export function Skills() {
               <ul className="skills-icons" aria-label={group.title}>
                 {group.items.map((item) => (
                   <li key={`${group.title}-${item.name}`}>
-                    <span className="skills-icon" title={item.name}>
+                    <a
+                      className="skills-icon"
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      title={item.name}
+                      aria-label={`Open ${item.name}`}
+                    >
                       <img
                         src={item.icon}
-                        alt={item.name}
+                        alt=""
                         loading="lazy"
                         width={40}
                         height={40}
                         className={item.invert ? 'is-invert' : undefined}
                       />
-                    </span>
+                    </a>
                   </li>
                 ))}
               </ul>
