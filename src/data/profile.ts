@@ -228,10 +228,10 @@ export const heroRoles = [
   'Software Engineer',
   'Data Engineer',
   'Data Scientist',
-  'Artificial Intelligence',
+  'AI Engineer',
   'RAG Pipeline Builder',
   'Cybersecurity Enthusiast',
-  'System Thinker',
+  'Systems Thinker',
   'Problem Solver',
 ] as const
 
