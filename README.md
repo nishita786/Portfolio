@@ -1,12 +1,16 @@
 # Nishita Kumari — Portfolio
 
-A chic, animated personal portfolio inspired by immersive space-landing composition — adapted for a software engineer profile (abstract luminous orbs instead of planets).
+Live site: **[https://nishita-kumari-myportfolio.vercel.app/](https://nishita-kumari-myportfolio.vercel.app/)**
+
+Repo: [github.com/nishita786/Portfolio](https://github.com/nishita786/Portfolio)
+
+A chic, animated personal portfolio — Vite + React + TypeScript, Framer Motion, and a signal-blue tech theme.
 
 ## Stack
 
 - Vite + React + TypeScript
 - Framer Motion
-- Canvas starfield + luminous orb animations
+- Canvas starfield + animated thought-pipeline hero
 
 ## Develop
 

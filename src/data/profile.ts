@@ -25,6 +25,8 @@ export const profile = {
   links: {
     linkedin: 'https://www.linkedin.com/in/nishitakr/',
     github: 'https://github.com/nishita786',
+    portfolioRepo: 'https://github.com/nishita786/Portfolio',
+    site: 'https://nishita-kumari-myportfolio.vercel.app/',
     email: 'mailto:nishitakm786@gmail.com',
     gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('nishitakm786@gmail.com')}`,
     resume: '/Nishita_Kumari_Resume.pdf',
