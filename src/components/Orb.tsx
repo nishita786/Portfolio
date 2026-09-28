@@ -1,5 +1,3 @@
-import { profile } from '../data/profile'
-
 type OrbProps = {
   size?: 'hero' | 'peek'
   className?: string
@@ -19,15 +17,14 @@ export function Orb({ size = 'hero', className = '' }: OrbProps) {
       <div className="orb-halo" aria-hidden="true" />
 
       {size === 'hero' ? (
-        <div className="orb-location" role="img" aria-label={`Based in ${profile.location}`}>
+        <div
+          className="orb-location"
+          role="img"
+          aria-label="Location pin on Karnataka, India"
+        >
           <span className="orb-location-pulse" aria-hidden="true" />
           <span className="orb-location-pulse orb-location-pulse--delay" aria-hidden="true" />
-          <span className="orb-location-dot" aria-hidden="true" />
-          <span className="orb-location-pin" aria-hidden="true" />
-          <span className="orb-location-label">
-            <span className="orb-location-live">Live</span>
-            {profile.location}
-          </span>
+          <span className="orb-location-marker" aria-hidden="true" />
         </div>
       ) : null}
     </div>
