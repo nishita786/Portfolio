@@ -61,8 +61,8 @@
   justify-content: center;
   padding: 0.55rem 1.15rem;
   border-radius: 999px;
-  background: linear-gradient(180deg, #f4eee3 0%, #e4d2b4 55%, #c9a66b 100%);
-  color: #1a140c;
+  background: linear-gradient(180deg, #f2f7ff 0%, #c9ddff 55%, #6ea8fe 100%);
+  color: #071018;
   font-size: var(--fs-button);
   font-weight: 700;
   letter-spacing: 0.08em;

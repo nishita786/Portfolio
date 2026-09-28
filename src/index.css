@@ -1,16 +1,15 @@
 :root {
-  /* Observatory night — warm, photographic, not neon */
-  --void: #050607;
-  --navy: #0a0b0d;
-  --accent: #c9a66b;
-  --accent-soft: rgba(201, 166, 107, 0.14);
-  --accent-glow: rgba(201, 166, 107, 0.32);
-  --paper: #f0ebe3;
-  --paper-muted: rgba(240, 235, 227, 0.72);
-  --paper-dim: rgba(240, 235, 227, 0.42);
-  --line: rgba(220, 200, 170, 0.12);
-  --card: rgba(16, 16, 18, 0.62);
-  --earth-sky: rgba(110, 170, 220, 0.28);
+  /* Signal / systems — cool graphite + signal blue */
+  --void: #04060a;
+  --navy: #070b12;
+  --accent: #6ea8fe;
+  --accent-soft: rgba(110, 168, 254, 0.14);
+  --accent-glow: rgba(110, 168, 254, 0.32);
+  --paper: #eef3fb;
+  --paper-muted: rgba(238, 243, 251, 0.72);
+  --paper-dim: rgba(238, 243, 251, 0.42);
+  --line: rgba(150, 180, 230, 0.14);
+  --card: rgba(12, 18, 30, 0.65);
 
   /* Legacy aliases used across components */
   --cyan: var(--accent);

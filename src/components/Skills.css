@@ -45,7 +45,7 @@
   height: 3.1rem;
   border-radius: 0.85rem;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(220, 200, 170, 0.1);
+  border: 1px solid rgba(150, 180, 230, 0.1);
   cursor: pointer;
   transition:
     transform 0.2s ease,
@@ -57,8 +57,8 @@
 .skills-icon:hover,
 .skills-icon:focus-visible {
   transform: translateY(-3px) scale(1.04);
-  border-color: rgba(201, 166, 107, 0.35);
-  background: rgba(201, 166, 107, 0.08);
+  border-color: rgba(110, 168, 254, 0.35);
+  background: rgba(110, 168, 254, 0.08);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
   outline: none;
 }
