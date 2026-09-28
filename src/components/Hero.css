@@ -45,11 +45,13 @@
   font-family: var(--font-display);
   font-size: clamp(4.8rem, 14vw, 8.5rem);
   font-weight: 500;
-  line-height: 0.9;
+  line-height: 1;
   letter-spacing: 0.01em;
   color: var(--white);
   text-shadow: 0 0 60px rgba(125, 211, 252, 0.15);
   margin-bottom: 1.35rem;
+  padding-block: 0.08em;
+  overflow: visible;
 }
 
 .hero-desc {

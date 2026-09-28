@@ -7,18 +7,15 @@ import './Hero.css'
 const slideVariants = {
   enter: (dir: number) => ({
     opacity: 0,
-    x: dir > 0 ? 48 : -48,
-    filter: 'blur(8px)',
+    x: dir > 0 ? 40 : -40,
   }),
   center: {
     opacity: 1,
     x: 0,
-    filter: 'blur(0px)',
   },
   exit: (dir: number) => ({
     opacity: 0,
-    x: dir > 0 ? -48 : 48,
-    filter: 'blur(8px)',
+    x: dir > 0 ? -40 : 40,
   }),
 }
 
@@ -44,9 +41,12 @@ export function Hero() {
   }, [go, index])
 
   useEffect(() => {
-    const timer = window.setInterval(() => go(index + 1, 1), 7000)
+    const timer = window.setInterval(() => {
+      setDirection(1)
+      setIndex((current) => (current + 1) % heroSlides.length)
+    }, 9000)
     return () => window.clearInterval(timer)
-  }, [go, index])
+  }, [])
 
   return (
     <section className="hero" id="home">
