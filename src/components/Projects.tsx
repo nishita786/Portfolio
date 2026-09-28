@@ -18,31 +18,47 @@ export function Projects() {
 
         <div className="projects-grid">
           {profile.projects.map((project, i) => (
-            <motion.a
+            <motion.article
               key={project.name}
-              href={project.href}
-              target="_blank"
-              rel="noreferrer"
-              className="project-row"
+              className="project-card"
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.45, delay: i * 0.04 }}
             >
-              <span className="project-index">{String(i + 1).padStart(2, '0')}</span>
-              <div className="project-body">
-                <h3>{project.name}</h3>
-                <p>{project.blurb}</p>
-                <ul>
-                  {project.stack.map((tech) => (
-                    <li key={tech}>{tech}</li>
-                  ))}
-                </ul>
-              </div>
-              <span className="project-go" aria-hidden="true">
-                →
-              </span>
-            </motion.a>
+              <header className="project-header">
+                <div>
+                  <p className="project-index">{String(i + 1).padStart(2, '0')}</p>
+                  <h3>
+                    <a href={project.href} target="_blank" rel="noreferrer">
+                      {project.name}
+                    </a>
+                  </h3>
+                  <p className="project-subtitle">{project.subtitle}</p>
+                </div>
+                <a
+                  className="project-go"
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${project.name} on GitHub`}
+                >
+                  →
+                </a>
+              </header>
+
+              <ul className="project-points">
+                {project.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+
+              <ul className="project-stack">
+                {project.stack.map((tech) => (
+                  <li key={tech}>{tech}</li>
+                ))}
+              </ul>
+            </motion.article>
           ))}
         </div>
       </div>
