@@ -13,7 +13,7 @@ export function Projects() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.45 }}
         >
-          Work
+          Projects
         </motion.h2>
 
         <div className="projects-grid">
