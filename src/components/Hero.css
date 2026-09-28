@@ -1,0 +1,217 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: calc(var(--nav-h) + 1rem) 1.25rem 0;
+}
+
+.hero-atmosphere {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 40% at 50% 35%, rgba(56, 189, 248, 0.08), transparent 70%),
+    radial-gradient(ellipse 40% 30% at 20% 70%, rgba(14, 165, 233, 0.05), transparent 60%);
+  pointer-events: none;
+}
+
+.hero-center {
+  position: relative;
+  z-index: 3;
+  width: min(720px, 100%);
+  text-align: center;
+  margin-top: -8vh;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 0.85rem;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(4.8rem, 14vw, 8.5rem);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  text-shadow: 0 0 60px rgba(125, 211, 252, 0.15);
+  margin-bottom: 1.35rem;
+}
+
+.hero-desc {
+  max-width: 28rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.hero-cta {
+  margin-bottom: 2.25rem;
+}
+
+.hero-dots {
+  display: flex;
+  gap: 0.55rem;
+  justify-content: center;
+}
+
+.hero-dots button {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-dots button.is-active {
+  background: var(--accent);
+  transform: scale(1.25);
+  box-shadow: 0 0 12px rgba(125, 211, 252, 0.7);
+}
+
+.hero-side {
+  position: absolute;
+  top: 48%;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  opacity: 0.72;
+  transition: opacity 0.3s ease, transform 0.35s var(--ease-out);
+}
+
+.hero-side:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.03);
+}
+
+.hero-side--left {
+  left: clamp(0.5rem, 3vw, 2.5rem);
+  transform: translateY(-50%);
+}
+
+.hero-side--right {
+  right: clamp(0.5rem, 3vw, 2.5rem);
+  transform: translateY(-50%);
+}
+
+.hero-side-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.hero-side--right .hero-side-label {
+  transform: none;
+}
+
+.hero-side-orb {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, hsla(var(--hue), 90%, 85%, 0.95), hsla(var(--hue), 80%, 45%, 0.7) 45%, hsla(var(--hue), 70%, 18%, 0.9) 75%, transparent 78%),
+    radial-gradient(circle at 50% 50%, hsla(var(--hue), 90%, 50%, 0.35), transparent 70%);
+  box-shadow:
+    0 0 24px hsla(var(--hue), 90%, 55%, 0.45),
+    inset 0 0 12px hsla(var(--hue), 90%, 80%, 0.25);
+  animation: orb-pulse 4.5s ease-in-out infinite;
+}
+
+@keyframes orb-pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+    transform: scale(1);
+  }
+  50% {
+    filter: brightness(1.15);
+    transform: scale(1.04);
+  }
+}
+
+.hero-orb-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: min(42vh, 420px);
+  z-index: 2;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 50%;
+  z-index: 5;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(5, 10, 20, 0.55);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-scroll span {
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid var(--white);
+  border-bottom: 1.5px solid var(--white);
+  transform: rotate(45deg) translate(-1px, -1px);
+  animation: scroll-bob 1.8s ease-in-out infinite;
+}
+
+.hero-scroll:hover {
+  border-color: var(--accent);
+  transform: translateX(-50%) translateY(2px);
+}
+
+@keyframes scroll-bob {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: rotate(45deg) translate(-1px, -3px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(45deg) translate(-1px, 1px);
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-side {
+    display: none;
+  }
+
+  .hero-center {
+    margin-top: -4vh;
+  }
+
+  .hero-title {
+    font-size: clamp(3.8rem, 18vw, 5.5rem);
+  }
+}

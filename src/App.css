@@ -1,0 +1,12 @@
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.boot-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #02060f;
+  pointer-events: none;
+}
