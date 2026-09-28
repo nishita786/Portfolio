@@ -6,15 +6,6 @@ export function Experience() {
   return (
     <section className="section experience" id="path">
       <div className="container">
-        <motion.p
-          className="experience-eyebrow"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.45 }}
-        >
-          Selected
-        </motion.p>
         <motion.h2
           className="experience-heading"
           initial={{ opacity: 0, y: 16 }}
