@@ -423,8 +423,22 @@
   z-index: 8;
 }
 
-.hero-content.is-zooming {
+.hero-content.is-zooming,
+.hero-content.is-greeting {
   pointer-events: none;
+  z-index: 9;
+}
+
+.hero-greeting-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 55% 40% at 50% 28%,
+    rgba(10, 11, 13, 0.15),
+    rgba(5, 6, 7, 0.55) 70%
+  );
 }
 
 .hero-zoom-veil {
@@ -440,11 +454,19 @@
   );
 }
 
+.hero.is-greeting .hero-nav,
+.hero.is-greeting .hero-scroll,
 .hero.is-zooming .hero-nav,
 .hero.is-zooming .hero-scroll {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
+}
+
+.hero.is-greeting .hero-title--intro {
+  text-shadow:
+    0 10px 36px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(240, 235, 227, 0.12);
 }
 
 @keyframes earth-idle {

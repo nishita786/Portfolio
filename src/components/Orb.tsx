@@ -30,7 +30,7 @@ export function Orb({
           type="button"
           className="orb-location"
           onClick={onLocationClick}
-          aria-label="Go to Overview from Karnataka, India"
+          aria-label="Open intro, then go to Overview"
         >
           <span className="orb-location-pulse" aria-hidden="true" />
           <span className="orb-location-pulse orb-location-pulse--delay" aria-hidden="true" />
