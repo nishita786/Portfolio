@@ -31,7 +31,7 @@ export function Statement() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.55 }}
         >
-          Crafting reliable systems, sharp algorithms, and data-driven products that actually ship.
+          Hi, I&apos;m {profile.firstName} — turning complex problems into clean, reliable systems.
         </motion.h2>
         <motion.p
           className="statement-copy"
@@ -40,7 +40,18 @@ export function Statement() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.55, delay: 0.08 }}
         >
-          {profile.summary} {profile.tagline}
+          {profile.summary}
+        </motion.p>
+        <motion.p
+          className="statement-copy statement-copy--secondary"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.55, delay: 0.12 }}
+        >
+          What motivates me most is asking <em>why</em> before jumping into <em>how</em> — then
+          shipping backends, data pipelines, and AI-assisted tools that other builders can trust.
+          {` ${profile.tagline}`}
         </motion.p>
 
         <motion.ul

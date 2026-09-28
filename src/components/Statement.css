@@ -32,7 +32,17 @@
   font-size: 1.02rem;
   line-height: 1.75;
   max-width: 58ch;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 1rem;
+}
+
+.statement-copy--secondary {
+  margin-bottom: 2.5rem;
+}
+
+.statement-copy em {
+  font-style: italic;
+  color: #fff;
+  font-family: var(--font-display);
 }
 
 .statement-stats {

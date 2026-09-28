@@ -31,7 +31,7 @@ export function Contact() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.45 }}
         >
-          Reach out
+          Let&apos;s collaborate
         </motion.h2>
         <motion.p
           className="contact-copy"
@@ -40,7 +40,8 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ delay: 0.05 }}
         >
-          Open to SDE, backend, and data roles — or just a good conversation about systems.
+          Open to SDE, backend, and data roles — happy to bring your next idea to life, or just talk
+          systems.
         </motion.p>
 
         <motion.a

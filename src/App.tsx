@@ -5,6 +5,7 @@ import { Hero } from './components/Hero'
 import { Starfield } from './components/Starfield'
 import { Statement } from './components/Statement'
 import { Projects } from './components/Projects'
+import { Skills } from './components/Skills'
 import { Experience } from './components/Experience'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
@@ -31,7 +32,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    const ids = ['home', 'about', 'projects', 'experience', 'contact']
+    const ids = ['home', 'about', 'projects', 'skills', 'experience', 'contact']
     const observers: IntersectionObserver[] = []
 
     ids.forEach((id) => {
@@ -69,6 +70,7 @@ function App() {
         <Hero mouseX={mouse.x} mouseY={mouse.y} />
         <Statement />
         <Projects />
+        <Skills />
         <Experience />
         <Contact />
       </main>
