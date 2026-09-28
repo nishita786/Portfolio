@@ -13,7 +13,7 @@ export function Experience() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.45 }}
         >
-          Under pressure
+          Selected
         </motion.p>
         <motion.h2
           className="experience-heading"
@@ -22,7 +22,7 @@ export function Experience() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.45 }}
         >
-          Hackathons
+          Arena
         </motion.h2>
         <motion.p
           className="experience-lede"

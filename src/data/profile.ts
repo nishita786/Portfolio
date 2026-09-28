@@ -241,7 +241,7 @@ export const heroSlides: HeroSlide[] = [
     peek: 'Builds',
     description:
       'Hackathons where I shipped under pressure — ClearCare AI, OpenMetadata connectors, and leading Team Quantum.',
-    cta: 'See Hackathons',
+    cta: 'See Arena',
     target: '#path',
     hue: 175,
   },
