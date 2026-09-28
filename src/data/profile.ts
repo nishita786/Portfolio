@@ -43,14 +43,30 @@ export const profile = {
     },
     {
       stage: '02',
-      period: 'Ongoing',
-      title: 'Build & Experiment',
-      place: 'Personal projects & hackathons',
+      period: 'Hackathon',
+      title: 'ClearCare AI',
+      place: 'Cognizant TechnoVation',
       detail:
-        'Shipping pipelines, analytics platforms, AI apps, and backend systems — from rough ideas to working products.',
+        'Built a health-tech platform integrating AI-powered insurance advisory, clinical pre-authorization automation, and multilingual patient education.',
     },
     {
       stage: '03',
+      period: 'Hackathon',
+      title: 'Open Metadata',
+      place: 'WeMakeDevs × OpenMetadata',
+      detail:
+        'Proposed and prototyped an advanced metadata management solution with schema impact analysis and semantic duplicate detection.',
+    },
+    {
+      stage: '04',
+      period: 'Hackathon',
+      title: 'Tata LXC Teleport · S4',
+      place: 'CRAT Partners · Team Quantum (Lead)',
+      detail:
+        'Led Team Quantum at the Tata LXC Teleport Season 4 hackathon by CRAT Partners — driving problem framing, collaboration, and delivery under real constraints.',
+    },
+    {
+      stage: '05',
       period: '2025 — Present',
       title: 'Backend Developer Intern',
       place: 'Nija Venture Impacts Pvt. Ltd.',
@@ -58,7 +74,7 @@ export const profile = {
         'Designing REST APIs, MongoDB data models, JWT auth, and reliable services with Node.js and Express.',
     },
     {
-      stage: '04',
+      stage: '06',
       period: 'Next',
       title: 'Open to Roles',
       place: 'SDE · Data · Backend · AI',
