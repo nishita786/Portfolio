@@ -26,6 +26,7 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/nishita-kumari-profile',
     github: 'https://github.com/nishita786',
     email: 'mailto:nishitakm786@gmail.com',
+    gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('nishitakm786@gmail.com')}`,
     resume: '/Nishita_Kumari_Resume.pdf',
     leetcode: 'https://leetcode.com/u/QgyWXdSCx8/',
     hackerrank: 'https://www.hackerrank.com/profile/nishitakm786',

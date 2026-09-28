@@ -3,7 +3,7 @@ import { profile } from '../data/profile'
 import './Statement.css'
 
 const overviewLinks = [
-  { label: 'Gmail', href: profile.links.email },
+  { label: 'Gmail', href: profile.links.gmail },
   { label: 'GitHub', href: profile.links.github },
   { label: 'LinkedIn', href: profile.links.linkedin },
   { label: 'Resume', href: profile.links.resume, download: true },
@@ -58,8 +58,8 @@ export function Statement() {
             <li key={link.label}>
               <a
                 href={link.href}
-                target={link.href.startsWith('mailto:') ? undefined : '_blank'}
-                rel={link.href.startsWith('mailto:') ? undefined : 'noreferrer'}
+                target="_blank"
+                rel="noreferrer"
                 download={link.download ? 'Nishita_Kumari_Resume.pdf' : undefined}
               >
                 {link.label}

@@ -3,12 +3,11 @@ import { profile } from '../data/profile'
 import './Contact.css'
 
 const socials = [
-  { label: 'Gmail', href: profile.links.email, mark: 'G' },
+  { label: 'Gmail', href: profile.links.gmail, mark: 'G' },
   { label: 'GitHub', href: profile.links.github, mark: '⌘' },
   { label: 'LinkedIn', href: profile.links.linkedin, mark: 'in' },
   { label: 'LeetCode', href: profile.links.leetcode, mark: 'LC' },
   { label: 'HackerRank', href: profile.links.hackerrank, mark: 'HR' },
-  { label: 'CodeChef', href: profile.links.codechef, mark: 'CC' },
 ]
 
 export function Contact() {
@@ -44,17 +43,6 @@ export function Contact() {
           systems.
         </motion.p>
 
-        <motion.a
-          className="contact-email"
-          href={profile.links.email}
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.08 }}
-        >
-          {profile.email}
-        </motion.a>
-
         <motion.div
           className="contact-socials"
           initial={{ opacity: 0, y: 14 }}
@@ -66,8 +54,8 @@ export function Contact() {
             <a
               key={item.label}
               href={item.href}
-              target={item.href.startsWith('mailto:') ? undefined : '_blank'}
-              rel={item.href.startsWith('mailto:') ? undefined : 'noreferrer'}
+              target="_blank"
+              rel="noreferrer"
               className="contact-social"
             >
               <span className="contact-social-mark" aria-hidden="true">
