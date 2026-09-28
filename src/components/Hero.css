@@ -439,9 +439,8 @@
     display: none;
   }
 
-  .hero-tech-net {
-    width: min(780px, 140vw);
-    opacity: 0.85;
+  .hero-thought-labels span {
+    font-size: 0.55rem;
   }
 }
 
