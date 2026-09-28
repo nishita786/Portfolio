@@ -111,11 +111,11 @@ export const profile = {
       href: 'https://github.com/nishita786/Lexicon-gate',
     },
     {
-      name: 'Deep Learning Lab',
+      name: 'Sign Language Recognition',
       blurb:
-        'Hands-on deep learning experiments spanning feed-forward nets, CNNs on MNIST/Fashion-MNIST, and BLIP image captioning with TensorFlow, Keras, and Transformers.',
-      stack: ['Python', 'TensorFlow', 'Keras', 'PyTorch', 'Transformers'],
-      href: 'https://github.com/nishita786/dl',
+        'Computer-vision model that recognizes sign language gestures — trained with deep learning to map hand signs to text for more accessible communication.',
+      stack: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'CNN'],
+      href: 'https://github.com/nishita786/Sign-Language-Recognition',
     },
     {
       name: 'KYC / AML Orchestration',
@@ -215,7 +215,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'Work',
     peek: 'Work',
     description:
-      'Top builds — Lexicon Gate, deep learning lab, KYC/AML orchestration, and ZestRoute analytics.',
+      'Top builds — Lexicon Gate, Sign Language Recognition, KYC/AML orchestration, and ZestRoute analytics.',
     cta: 'View Projects',
     target: '#projects',
     hue: 205,
