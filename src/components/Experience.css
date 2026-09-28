@@ -17,6 +17,15 @@
   font-weight: 500;
   letter-spacing: -0.02em;
   color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.experience-lede {
+  color: var(--ice-muted);
+  font-weight: 300;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  max-width: 42ch;
   margin-bottom: 2.75rem;
 }
 
@@ -115,14 +124,38 @@
 .path-place {
   color: var(--ice-muted);
   font-size: 0.92rem;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.9rem;
 }
 
 .path-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.path-detail p {
   color: var(--ice-muted);
   font-weight: 300;
   font-size: 0.95rem;
-  line-height: 1.65;
+  line-height: 1.7;
+}
+
+.path-focus {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.path-focus li {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  border: 1px solid rgba(64, 224, 208, 0.28);
+  border-radius: 999px;
+  padding: 0.3rem 0.65rem;
 }
 
 @media (max-width: 560px) {

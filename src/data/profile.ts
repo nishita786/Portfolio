@@ -35,51 +35,51 @@ export const profile = {
   path: [
     {
       stage: '01',
-      period: '2022 — 2026',
-      title: 'CSE · Data Science',
-      place: 'MVJ College of Engineering',
-      detail:
-        'Building foundations in algorithms, data systems, and intelligent applications while specializing in Data Science.',
+      period: 'Hackathon',
+      title: 'ClearCare AI',
+      place: 'Cognizant TechnoVision Hackathon',
+      detail: [
+        'Designed and developed ClearCare AI, an AI-powered healthcare platform focused on simplifying insurance and clinical workflows. The solution combines AI-driven insurance advisory, automated clinical pre-authorization, and multilingual patient education into a unified platform.',
+        'The system is designed to help patients better understand insurance-related decisions while reducing manual effort in pre-authorization workflows. It also uses multilingual AI interactions to make healthcare information more accessible to users from different linguistic backgrounds.',
+      ],
+      focus: ['AI/ML', 'Healthcare Technology', 'Automation', 'NLP', 'Multilingual AI'],
     },
     {
       stage: '02',
       period: 'Hackathon',
-      title: 'ClearCare AI',
-      place: 'Cognizant TechnoVation',
-      detail:
-        'Built a health-tech platform integrating AI-powered insurance advisory, clinical pre-authorization automation, and multilingual patient education.',
+      title: 'Notion × OpenMetadata Connector',
+      place: 'WeMakeDevs × OpenMetadata Hackathon',
+      detail: [
+        'Built and prototyped a Notion connector for OpenMetadata to bridge the gap between workspace documentation and enterprise data discovery. The project enables information from Notion to be integrated into OpenMetadata, making documentation and metadata easier to discover and manage from a centralized platform.',
+        'The connector was designed around a Notion → Connector → OpenMetadata workflow, using the Notion API and OpenMetadata ingestion framework to retrieve content, process metadata, and integrate it into the OpenMetadata ecosystem.',
+        'The project focused on creating a modular and extensible integration that could handle external-service communication, metadata mapping, API orchestration, validation, and ingestion while fitting into OpenMetadata’s existing architecture.',
+      ],
+      focus: [
+        'OpenMetadata',
+        'Notion API',
+        'Data Engineering',
+        'Metadata Management',
+        'API Integration',
+        'Data Discovery',
+      ],
     },
     {
       stage: '03',
       period: 'Hackathon',
-      title: 'Open Metadata',
-      place: 'WeMakeDevs × OpenMetadata',
-      detail:
-        'Proposed and prototyped an advanced metadata management solution with schema impact analysis and semantic duplicate detection.',
-    },
-    {
-      stage: '04',
-      period: 'Hackathon',
-      title: 'Tata LXC Teleport · S4',
-      place: 'CRAT Partners · Team Quantum (Lead)',
-      detail:
-        'Led Team Quantum at the Tata LXC Teleport Season 4 hackathon by CRAT Partners — driving problem framing, collaboration, and delivery under real constraints.',
-    },
-    {
-      stage: '05',
-      period: '2025 — Present',
-      title: 'Backend Developer Intern',
-      place: 'Nija Venture Impacts Pvt. Ltd.',
-      detail:
-        'Designing REST APIs, MongoDB data models, JWT auth, and reliable services with Node.js and Express.',
-    },
-    {
-      stage: '06',
-      period: 'Next',
-      title: 'Open to Roles',
-      place: 'SDE · Data · Backend · AI',
-      detail:
-        'Looking to work on data-intensive and intelligent systems that solve meaningful real-world problems.',
+      title: 'Tata Elxsi Teleport · Season 4',
+      place: 'Grad Partners · Team Quantum — Lead',
+      detail: [
+        'Led Team Quantum during the Tata Elxsi Teleport Season 4 hackathon, taking the project from problem understanding and ideation through solution development and presentation.',
+        'As the team lead, I was involved in problem framing, solution strategy, task coordination, technical discussions, and final delivery. The experience involved working under a fixed deadline and translating an open-ended problem statement into a structured, practical solution.',
+        'Beyond the technical aspects, the project strengthened my experience in team leadership, collaborative problem-solving, rapid prototyping, and decision-making under real-world constraints.',
+      ],
+      focus: [
+        'Team Leadership',
+        'Problem Solving',
+        'Rapid Prototyping',
+        'Collaboration',
+        'Product Thinking',
+      ],
     },
   ],
   education: {
@@ -236,12 +236,12 @@ export const heroSlides: HeroSlide[] = [
   },
   {
     id: 'path',
-    label: 'Career',
-    title: 'Path',
-    peek: 'Path',
+    label: 'Selected',
+    title: 'Builds',
+    peek: 'Builds',
     description:
-      'Backend intern shipping REST APIs, auth, and durable services — with DSA practice across LeetCode and HackerRank.',
-    cta: 'See Experience',
+      'Hackathons where I shipped under pressure — ClearCare AI, OpenMetadata connectors, and leading Team Quantum.',
+    cta: 'See Hackathons',
     target: '#path',
     hue: 175,
   },
