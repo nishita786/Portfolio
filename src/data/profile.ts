@@ -122,7 +122,14 @@ export const profile = {
 export const heroRoles = [
   'Front-end Developer',
   'Back-end Developer',
+  'Full Stack Developer',
+  'Software Engineer',
+  'Data Engineer',
+  'Data Scientist',
   'Artificial Intelligence',
+  'RAG Pipeline Builder',
+  'Cybersecurity Enthusiast',
+  'System Thinker',
   'Problem Solver',
 ] as const
 
