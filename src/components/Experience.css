@@ -58,8 +58,8 @@
   margin-top: 1.55rem;
   background: var(--cyan);
   box-shadow:
-    0 0 0 4px rgba(64, 224, 208, 0.14),
-    0 0 18px rgba(64, 224, 208, 0.55);
+    0 0 0 4px rgba(201, 166, 107, 0.14),
+    0 0 0 transparent;
   flex-shrink: 0;
   z-index: 1;
 }
@@ -69,7 +69,7 @@
   width: 2px;
   min-height: 2.5rem;
   margin-top: 0.35rem;
-  background: linear-gradient(180deg, rgba(64, 224, 208, 0.65), rgba(64, 224, 208, 0.08));
+  background: linear-gradient(180deg, rgba(201, 166, 107, 0.65), rgba(201, 166, 107, 0.08));
 }
 
 .path-card {
@@ -85,7 +85,7 @@
 }
 
 .path-card:hover {
-  border-color: rgba(64, 224, 208, 0.35);
+  border-color: rgba(201, 166, 107, 0.35);
   transform: translateY(-2px);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
 }
@@ -153,7 +153,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cyan);
-  border: 1px solid rgba(64, 224, 208, 0.28);
+  border: 1px solid rgba(201, 166, 107, 0.28);
   border-radius: 999px;
   padding: 0.3rem 0.65rem;
 }

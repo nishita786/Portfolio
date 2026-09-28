@@ -75,7 +75,7 @@
 
 .statement-links a:hover {
   color: #fff;
-  border-color: rgba(64, 224, 208, 0.45);
+  border-color: rgba(201, 166, 107, 0.45);
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }

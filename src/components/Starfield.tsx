@@ -58,7 +58,7 @@ export function Starfield({ mouseX, mouseY }: StarfieldProps) {
         const y = s.y + py * depth
         const twinkle = 0.55 + 0.45 * Math.sin(t * 0.0012 + s.tw)
         ctx.beginPath()
-        ctx.fillStyle = `rgba(210, 235, 255, ${s.a * twinkle})`
+        ctx.fillStyle = `rgba(235, 220, 190, ${s.a * twinkle})`
         ctx.arc(x, y, s.r * depth, 0, Math.PI * 2)
         ctx.fill()
       }

@@ -57,8 +57,8 @@
   font-size: clamp(1.05rem, 2.4vw, 1.45rem);
   font-weight: 400;
   letter-spacing: 0.04em;
-  color: var(--cyan);
-  text-shadow: 0 0 24px rgba(64, 224, 208, 0.35);
+  color: var(--accent);
+  text-shadow: none;
 }
 
 .typewriter {
@@ -72,8 +72,8 @@
   width: 2px;
   height: 1.15em;
   margin-left: 0.12rem;
-  background: var(--cyan);
-  box-shadow: 0 0 10px rgba(64, 224, 208, 0.7);
+  background: var(--accent);
+  box-shadow: none;
   animation: caret-blink 0.9s steps(1, end) infinite;
 }
 
@@ -92,8 +92,8 @@
   width: 2.4rem;
   height: 2px;
   border-radius: 2px;
-  background: var(--cyan);
-  box-shadow: 0 0 16px rgba(64, 224, 208, 0.55);
+  background: var(--accent);
+  box-shadow: none;
   margin: 0.15rem 0 0.2rem;
 }
 
@@ -113,16 +113,15 @@
   margin-top: 0.55rem;
   padding: 0.85rem 1.85rem;
   border-radius: 999px;
-  background: linear-gradient(180deg, #f4fbff 0%, #cfefff 55%, #a8dff8 100%);
-  color: #0a1628;
+  background: linear-gradient(180deg, #f4eee3 0%, #e4d2b4 55%, #c9a66b 100%);
+  color: #1a140c;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.35),
-    0 0 28px rgba(120, 210, 255, 0.45),
-    0 10px 30px rgba(0, 0, 0, 0.35);
+    0 0 0 1px rgba(255, 240, 220, 0.25),
+    0 10px 28px rgba(0, 0, 0, 0.4);
   transition:
     transform 0.25s var(--ease-out),
     box-shadow 0.25s var(--ease-out);
@@ -131,9 +130,8 @@
 .hero-cta:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.5),
-    0 0 40px rgba(120, 210, 255, 0.65),
-    0 14px 34px rgba(0, 0, 0, 0.4);
+    0 0 0 1px rgba(255, 240, 220, 0.4),
+    0 14px 34px rgba(0, 0, 0, 0.45);
 }
 
 .hero-stage {
@@ -171,7 +169,7 @@
 
 .hero-peek:focus-visible {
   color: #fff;
-  outline: 1.5px solid rgba(64, 224, 208, 0.7);
+  outline: 1.5px solid rgba(201, 166, 107, 0.7);
   outline-offset: 6px;
   border-radius: 999px;
 }
@@ -220,7 +218,7 @@
   display: grid;
   place-items: center;
   background: rgba(8, 14, 28, 0.72);
-  border: 1px solid rgba(180, 220, 255, 0.28);
+  border: 1px solid rgba(220, 200, 170, 0.28);
   color: #fff;
   font-size: 1rem;
   backdrop-filter: blur(8px);
@@ -238,13 +236,12 @@
   }
 }
 
-/* Abstract orb */
+/* Photoreal Earth */
 .orb {
   position: relative;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  --orb-hue: 190;
 }
 
 .orb--peek {
@@ -253,78 +250,96 @@
   flex-shrink: 0;
 }
 
-.orb-glow {
+.orb-atmosphere {
   position: absolute;
-  inset: -8%;
+  inset: -2%;
   border-radius: 50%;
   background: radial-gradient(
-    circle at 35% 30%,
-    hsla(var(--orb-hue), 90%, 65%, 0.45),
-    hsla(var(--orb-hue), 80%, 45%, 0.12) 45%,
-    transparent 70%
+    circle at 42% 38%,
+    rgba(140, 190, 255, 0.22),
+    rgba(70, 130, 200, 0.1) 42%,
+    transparent 68%
   );
-  filter: blur(18px);
-  animation: orb-breathe 5s ease-in-out infinite;
+  filter: blur(10px);
+  animation: orb-breathe 7s ease-in-out infinite;
 }
 
-.orb-core {
+.orb-halo {
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgba(160, 200, 255, 0.18),
+    0 0 40px rgba(90, 150, 220, 0.18),
+    0 0 90px rgba(40, 70, 120, 0.2);
+  pointer-events: none;
+}
+
+.orb-sphere {
   position: absolute;
   inset: 8%;
   border-radius: 50%;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 28% 22%, rgba(255, 255, 255, 0.75), transparent 18%),
-    radial-gradient(circle at 32% 28%, hsla(var(--orb-hue), 85%, 78%, 0.95), transparent 28%),
-    radial-gradient(circle at 68% 78%, hsla(calc(var(--orb-hue) + 30), 70%, 10%, 0.95), transparent 50%),
-    radial-gradient(circle at 50% 50%, hsla(var(--orb-hue), 70%, 48%, 0.95), hsla(calc(var(--orb-hue) - 25), 75%, 10%, 1) 72%);
+  background: #041018;
   box-shadow:
-    inset -32px -40px 55px rgba(0, 0, 0, 0.65),
-    inset 20px 16px 34px hsla(var(--orb-hue), 90%, 80%, 0.28),
-    0 0 80px hsla(var(--orb-hue), 90%, 55%, 0.45),
-    0 0 140px hsla(var(--orb-hue), 85%, 45%, 0.25);
-  animation: orb-spin 28s linear infinite;
+    inset -28px -36px 50px rgba(0, 0, 0, 0.72),
+    inset 14px 12px 28px rgba(220, 200, 170, 0.12),
+    0 18px 50px rgba(0, 0, 0, 0.45);
 }
 
-.orb--peek .orb-core {
-  animation-duration: 36s;
-}
-
-.orb-shine {
+.orb-texture {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.55), transparent 32%);
-  mix-blend-mode: soft-light;
-}
-
-.orb-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid hsla(var(--orb-hue), 80%, 75%, 0.28);
-  inset: 18%;
-}
-
-.orb-ring--b {
-  inset: 32%;
-  border-color: hsla(var(--orb-hue), 80%, 75%, 0.18);
-  transform: rotate(25deg) scaleX(1.15);
-}
-
-.orb-mesh {
-  position: absolute;
-  inset: 0;
+  inset: -8%;
   background:
-    repeating-conic-gradient(
-      from 0deg,
-      hsla(var(--orb-hue), 90%, 80%, 0.07) 0deg 2deg,
-      transparent 2deg 18deg
-    );
-  opacity: 0.55;
-  mix-blend-mode: overlay;
+    url('/earth-globe.png') center / cover no-repeat;
+  border-radius: 50%;
+  animation: earth-drift 90s linear infinite;
+  filter: saturate(0.9) contrast(1.02) brightness(0.98);
 }
 
-@keyframes orb-spin {
+.orb-clouds {
+  position: absolute;
+  inset: -12%;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse 28% 18% at 30% 35%, rgba(255, 255, 255, 0.22), transparent 70%),
+    radial-gradient(ellipse 22% 14% at 62% 48%, rgba(255, 255, 255, 0.16), transparent 70%),
+    radial-gradient(ellipse 18% 12% at 48% 68%, rgba(255, 255, 255, 0.12), transparent 70%);
+  animation: earth-drift 120s linear infinite reverse;
+  mix-blend-mode: soft-light;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.orb-shade {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 28% 26%, rgba(255, 255, 255, 0.14), transparent 34%),
+    linear-gradient(118deg, transparent 38%, rgba(0, 0, 0, 0.45) 72%, rgba(0, 0, 0, 0.72) 100%);
+  pointer-events: none;
+}
+
+.orb-specular {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 22%, rgba(255, 255, 255, 0.38), transparent 28%);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.orb--peek .orb-texture {
+  animation-duration: 110s;
+}
+
+@keyframes earth-drift {
+  from {
+    transform: rotate(0deg) scale(1.08);
+  }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) scale(1.08);
   }
 }
 
@@ -335,7 +350,7 @@
     opacity: 0.85;
   }
   50% {
-    transform: scale(1.08);
+    transform: scale(1.04);
     opacity: 1;
   }
 }

@@ -1,19 +1,28 @@
 :root {
-  --void: #050814;
-  --navy: #0b0d17;
-  --cyan: #40e0d0;
-  --cyan-soft: rgba(64, 224, 208, 0.16);
-  --cyan-glow: rgba(64, 224, 208, 0.4);
-  --ice: #e6f2ff;
-  --ice-muted: rgba(230, 242, 255, 0.72);
-  --ice-dim: rgba(230, 242, 255, 0.4);
-  --line: rgba(180, 210, 255, 0.12);
-  --card: rgba(14, 20, 40, 0.55);
+  /* Observatory night — warm, photographic, not neon */
+  --void: #050607;
+  --navy: #0a0b0d;
+  --accent: #c9a66b;
+  --accent-soft: rgba(201, 166, 107, 0.14);
+  --accent-glow: rgba(201, 166, 107, 0.32);
+  --paper: #f0ebe3;
+  --paper-muted: rgba(240, 235, 227, 0.72);
+  --paper-dim: rgba(240, 235, 227, 0.42);
+  --line: rgba(220, 200, 170, 0.12);
+  --card: rgba(16, 16, 18, 0.62);
+  --earth-sky: rgba(110, 170, 220, 0.28);
 
-  --text: var(--ice);
-  --text-muted: var(--ice-muted);
-  --text-dim: var(--ice-dim);
-  --accent: var(--cyan);
+  /* Legacy aliases used across components */
+  --cyan: var(--accent);
+  --cyan-soft: var(--accent-soft);
+  --cyan-glow: var(--accent-glow);
+  --ice: var(--paper);
+  --ice-muted: var(--paper-muted);
+  --ice-dim: var(--paper-dim);
+
+  --text: var(--paper);
+  --text-muted: var(--paper-muted);
+  --text-dim: var(--paper-dim);
 
   --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
   --font-sans: 'Outfit', sans-serif;
@@ -85,7 +94,7 @@ img {
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.05;
-  color: #fff;
+  color: var(--paper);
 }
 
 @media (max-width: 768px) {
