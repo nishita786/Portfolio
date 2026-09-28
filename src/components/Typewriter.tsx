@@ -15,31 +15,52 @@ export function Typewriter({
   holdMs = 1600,
   className = '',
 }: TypewriterProps) {
-  const [index, setIndex] = useState(0)
   const [text, setText] = useState('')
-  const [deleting, setDeleting] = useState(false)
 
   useEffect(() => {
-    const phrase = phrases[index % phrases.length]
-    let timer: number
+    let phraseIndex = 0
+    let deleting = false
+    let current = ''
+    let timer = 0
+    let alive = true
 
-    if (!deleting && text === phrase) {
-      timer = window.setTimeout(() => setDeleting(true), holdMs)
-    } else if (deleting && text === '') {
-      setDeleting(false)
-      setIndex((i) => (i + 1) % phrases.length)
-    } else {
-      const next = deleting
-        ? phrase.slice(0, text.length - 1)
-        : phrase.slice(0, text.length + 1)
-      timer = window.setTimeout(
-        () => setText(next),
-        deleting ? deletingMs : typingMs,
-      )
+    const schedule = (fn: () => void, ms: number) => {
+      timer = window.setTimeout(() => {
+        if (alive) fn()
+      }, ms)
     }
 
-    return () => window.clearTimeout(timer)
-  }, [text, deleting, index, phrases, typingMs, deletingMs, holdMs])
+    const step = () => {
+      const phrase = phrases[phraseIndex % phrases.length]
+
+      if (!deleting && current === phrase) {
+        schedule(() => {
+          deleting = true
+          step()
+        }, holdMs)
+        return
+      }
+
+      if (deleting && current === '') {
+        deleting = false
+        phraseIndex = (phraseIndex + 1) % phrases.length
+        schedule(step, typingMs)
+        return
+      }
+
+      current = deleting
+        ? phrase.slice(0, current.length - 1)
+        : phrase.slice(0, current.length + 1)
+      setText(current)
+      schedule(step, deleting ? deletingMs : typingMs)
+    }
+
+    step()
+    return () => {
+      alive = false
+      window.clearTimeout(timer)
+    }
+  }, [phrases, typingMs, deletingMs, holdMs])
 
   return (
     <span className={`typewriter ${className}`}>
