@@ -26,11 +26,46 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/nishita-kumari-profile',
     github: 'https://github.com/nishita786',
     email: 'mailto:nishitakm786@gmail.com',
+    resume: '/Nishita_Kumari_Resume.pdf',
     leetcode: 'https://leetcode.com/u/QgyWXdSCx8/',
     hackerrank: 'https://www.hackerrank.com/profile/nishitakm786',
     codechef: 'https://www.codechef.com/users/nishita786',
     solutions: 'https://github.com/nishita786/leetcode-solutions',
   },
+  path: [
+    {
+      stage: '01',
+      period: '2022 — 2026',
+      title: 'CSE · Data Science',
+      place: 'MVJ College of Engineering',
+      detail:
+        'Building foundations in algorithms, data systems, and intelligent applications while specializing in Data Science.',
+    },
+    {
+      stage: '02',
+      period: 'Ongoing',
+      title: 'Build & Experiment',
+      place: 'Personal projects & hackathons',
+      detail:
+        'Shipping pipelines, analytics platforms, AI apps, and backend systems — from rough ideas to working products.',
+    },
+    {
+      stage: '03',
+      period: '2025 — Present',
+      title: 'Backend Developer Intern',
+      place: 'Nija Venture Impacts Pvt. Ltd.',
+      detail:
+        'Designing REST APIs, MongoDB data models, JWT auth, and reliable services with Node.js and Express.',
+    },
+    {
+      stage: '04',
+      period: 'Next',
+      title: 'Open to Roles',
+      place: 'SDE · Data · Backend · AI',
+      detail:
+        'Looking to work on data-intensive and intelligent systems that solve meaningful real-world problems.',
+    },
+  ],
   education: {
     degree: 'B.E. Computer Science & Engineering',
     specialization: 'Data Science',
@@ -191,7 +226,7 @@ export const heroSlides: HeroSlide[] = [
     description:
       'Backend intern shipping REST APIs, auth, and durable services — with DSA practice across LeetCode and HackerRank.',
     cta: 'See Experience',
-    target: '#experience',
+    target: '#path',
     hue: 175,
   },
   {

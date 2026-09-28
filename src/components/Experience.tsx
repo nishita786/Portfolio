@@ -4,7 +4,7 @@ import './Experience.css'
 
 export function Experience() {
   return (
-    <section className="section experience" id="experience">
+    <section className="section experience" id="path">
       <div className="container">
         <motion.p
           className="experience-eyebrow"
@@ -13,7 +13,7 @@ export function Experience() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.45 }}
         >
-          Career
+          Pipeline
         </motion.p>
         <motion.h2
           className="experience-heading"
@@ -25,55 +25,32 @@ export function Experience() {
           Path
         </motion.h2>
 
-        <div className="experience-list">
-          {profile.experience.map((job) => (
-            <motion.article
-              key={job.company}
-              className="experience-item"
-              initial={{ opacity: 0, y: 18 }}
+        <ol className="path-pipeline">
+          {profile.path.map((node, i) => (
+            <motion.li
+              key={node.stage}
+              className="path-node"
+              initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5 }}
+              viewport={{ once: true, amount: 0.35 }}
+              transition={{ duration: 0.5, delay: i * 0.06 }}
             >
-              <div className="experience-meta">
-                <span>{job.period}</span>
-                <h3>{job.role}</h3>
-                <p>{job.company}</p>
+              <div className="path-rail" aria-hidden="true">
+                <span className="path-dot" />
+                {i < profile.path.length - 1 ? <span className="path-line" /> : null}
               </div>
-              <ul>
-                {job.highlights.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
-            </motion.article>
+              <article className="path-card">
+                <div className="path-card-top">
+                  <span className="path-stage">{node.stage}</span>
+                  <span className="path-period">{node.period}</span>
+                </div>
+                <h3>{node.title}</h3>
+                <p className="path-place">{node.place}</p>
+                <p className="path-detail">{node.detail}</p>
+              </article>
+            </motion.li>
           ))}
-
-          <motion.article
-            className="experience-item"
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: 0.05 }}
-          >
-            <div className="experience-meta">
-              <span>{profile.education.year}</span>
-              <h3>{profile.education.degree}</h3>
-              <p>
-                {profile.education.school} · {profile.education.specialization}
-              </p>
-            </div>
-            <ul>
-              <li>
-                Specializing in Data Science with a focus on software engineering, algorithms, and
-                shipping production-minded systems.
-              </li>
-              <li>
-                Active on LeetCode (74 solved) and HackerRank (Python ★★★, Problem Solving ★★, R
-                Basic cert).
-              </li>
-            </ul>
-          </motion.article>
-        </div>
+        </ol>
       </div>
     </section>
   )

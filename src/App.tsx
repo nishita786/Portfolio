@@ -32,7 +32,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    const ids = ['home', 'overview', 'projects', 'skills', 'experience', 'contact']
+    const ids = ['home', 'overview', 'path', 'projects', 'skills', 'contact']
     const observers: IntersectionObserver[] = []
 
     ids.forEach((id) => {
@@ -69,9 +69,9 @@ function App() {
       <main>
         <Hero mouseX={mouse.x} mouseY={mouse.y} />
         <Statement />
+        <Experience />
         <Projects />
         <Skills />
-        <Experience />
         <Contact />
       </main>
       <Footer />

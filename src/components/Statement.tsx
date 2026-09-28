@@ -2,6 +2,13 @@ import { motion } from 'framer-motion'
 import { profile } from '../data/profile'
 import './Statement.css'
 
+const overviewLinks = [
+  { label: 'Gmail', href: profile.links.email },
+  { label: 'GitHub', href: profile.links.github },
+  { label: 'LinkedIn', href: profile.links.linkedin },
+  { label: 'Resume', href: profile.links.resume, download: true },
+]
+
 export function Statement() {
   return (
     <section className="section statement" id="overview">
@@ -39,6 +46,27 @@ export function Statement() {
             </motion.p>
           ))}
         </div>
+
+        <motion.ul
+          className="statement-links"
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          {overviewLinks.map((link) => (
+            <li key={link.label}>
+              <a
+                href={link.href}
+                target={link.href.startsWith('mailto:') ? undefined : '_blank'}
+                rel={link.href.startsWith('mailto:') ? undefined : 'noreferrer'}
+                download={link.download ? 'Nishita_Kumari_Resume.pdf' : undefined}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </motion.ul>
       </div>
     </section>
   )

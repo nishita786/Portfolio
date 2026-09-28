@@ -48,6 +48,38 @@
   margin-top: 0.5rem;
 }
 
+.statement-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 2.25rem;
+}
+
+.statement-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ice-muted);
+  font-size: 0.84rem;
+  letter-spacing: 0.06em;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.statement-links a:hover {
+  color: #fff;
+  border-color: rgba(64, 224, 208, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
 @media (max-width: 768px) {
   .statement-inner {
     text-align: left;

@@ -3,9 +3,9 @@ import './Navbar.css'
 
 const links = [
   { id: 'overview', label: 'Overview' },
+  { id: 'path', label: 'Path' },
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
-  { id: 'experience', label: 'Experience' },
   { id: 'contact', label: 'Contact' },
 ]
 
