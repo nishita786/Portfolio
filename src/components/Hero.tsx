@@ -1,15 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { heroRoles, heroSlides } from '../data/profile'
-import { Orb } from './Orb'
 import { Typewriter } from './Typewriter'
 import './Hero.css'
 
 const ease = [0.22, 1, 0.36, 1] as const
-const INTRO_INDEX = Math.max(
-  0,
-  heroSlides.findIndex((s) => s.intro),
-)
 
 type HeroProps = {
   mouseX: number
@@ -19,58 +14,18 @@ type HeroProps = {
 export function Hero({ mouseX, mouseY }: HeroProps) {
   const [index, setIndex] = useState(0)
   const [dir, setDir] = useState(0)
-  const [phase, setPhase] = useState<'idle' | 'greeting' | 'zooming'>('idle')
-  const timers = useRef<number[]>([])
   const n = heroSlides.length
   const active = heroSlides[index]
   const prev = heroSlides[(index - 1 + n) % n]
   const next = heroSlides[(index + 1) % n]
-  const busy = phase !== 'idle'
-
-  const clearTimers = () => {
-    timers.current.forEach((id) => window.clearTimeout(id))
-    timers.current = []
-  }
-
-  useEffect(() => () => clearTimers(), [])
 
   const go = (nextIndex: number, direction: number) => {
-    if (busy) return
     setDir(direction)
     setIndex((nextIndex + n) % n)
   }
 
-  const openFromPin = () => {
-    if (busy) return
-    clearTimers()
-
-    // 1) Land on "Hi, I'm Nishita"
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-    if (index !== INTRO_INDEX) {
-      setDir(index > INTRO_INDEX ? -1 : 1)
-      setIndex(INTRO_INDEX)
-    }
-    setPhase('greeting')
-
-    // 2) Hold the greeting, then zoop into Overview
-    const zoomId = window.setTimeout(() => {
-      setPhase('zooming')
-    }, 1100)
-
-    const scrollId = window.setTimeout(() => {
-      document.getElementById('overview')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }, 1650)
-
-    const resetId = window.setTimeout(() => {
-      setPhase('idle')
-    }, 2600)
-
-    timers.current = [zoomId, scrollId, resetId]
-  }
-
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (busy) return
       if (e.key === 'ArrowLeft') {
         setDir(-1)
         setIndex((i) => (i - 1 + n) % n)
@@ -82,30 +37,39 @@ export function Hero({ mouseX, mouseY }: HeroProps) {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [n, busy])
-
-  const zooming = phase === 'zooming'
-  const greeting = phase === 'greeting'
+  }, [n])
 
   return (
-    <section
-      className={`hero${greeting ? ' is-greeting' : ''}${zooming ? ' is-zooming' : ''}`}
-      id="home"
-    >
+    <section className="hero" id="home">
+      <div className="hero-tech" aria-hidden="true">
+        <div className="hero-tech-grid" />
+        <svg className="hero-tech-net" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+          <g className="hero-tech-links">
+            <path d="M120 120 L260 180 L420 110 L560 200 L680 140" />
+            <path d="M180 320 L300 250 L460 300 L620 240 L700 340" />
+            <path d="M260 180 L300 250 L420 110 L460 300 L560 200" />
+            <path d="M120 120 L180 320" />
+            <path d="M680 140 L700 340" />
+          </g>
+          <g className="hero-tech-nodes">
+            <circle cx="120" cy="120" r="3.5" />
+            <circle cx="260" cy="180" r="4.5" />
+            <circle cx="420" cy="110" r="3.5" />
+            <circle cx="560" cy="200" r="5" />
+            <circle cx="680" cy="140" r="3.5" />
+            <circle cx="180" cy="320" r="3.5" />
+            <circle cx="300" cy="250" r="4" />
+            <circle cx="460" cy="300" r="4.5" />
+            <circle cx="620" cy="240" r="3.5" />
+            <circle cx="700" cy="340" r="4" />
+          </g>
+        </svg>
+      </div>
+
       <motion.div
-        className={`hero-content${greeting ? ' is-greeting' : ''}${zooming ? ' is-zooming' : ''}`}
-        animate={
-          zooming
-            ? { opacity: 0, scale: 1.18, y: -28, filter: 'blur(8px)' }
-            : greeting
-              ? { opacity: 1, scale: 1.06, y: -18, x: 0 }
-              : { x: mouseX * -12, y: mouseY * -8, opacity: 1, scale: 1, filter: 'blur(0px)' }
-        }
-        transition={
-          zooming || greeting
-            ? { duration: zooming ? 0.55 : 0.65, ease }
-            : { type: 'spring', stiffness: 80, damping: 20 }
-        }
+        className="hero-content"
+        animate={{ x: mouseX * -10, y: mouseY * -6 }}
+        transition={{ type: 'spring', stiffness: 80, damping: 20 }}
       >
         <AnimatePresence mode="wait" custom={dir}>
           <motion.div
@@ -144,7 +108,6 @@ export function Hero({ mouseX, mouseY }: HeroProps) {
         className="hero-nav hero-nav--left"
         onClick={() => go(index - 1, -1)}
         aria-label={`Previous: ${prev.peek}`}
-        disabled={busy}
       >
         <span aria-hidden="true">‹</span>
         <span className="hero-nav-label">{prev.peek}</span>
@@ -155,58 +118,10 @@ export function Hero({ mouseX, mouseY }: HeroProps) {
         className="hero-nav hero-nav--right"
         onClick={() => go(index + 1, 1)}
         aria-label={`Next: ${next.peek}`}
-        disabled={busy}
       >
         <span className="hero-nav-label">{next.peek}</span>
         <span aria-hidden="true">›</span>
       </button>
-
-      <motion.div
-        className={`hero-stage${greeting ? ' is-greeting' : ''}${zooming ? ' is-zooming' : ''}`}
-        animate={
-          zooming
-            ? { scale: 4.2, opacity: 0, x: 0, y: 40 }
-            : greeting
-              ? { scale: 0.92, opacity: 0.72, x: 0, y: 18 }
-              : { x: mouseX * 22, y: mouseY * 14, scale: 1, opacity: 1 }
-        }
-        style={{ transformOrigin: '51.5% 54%' }}
-        transition={
-          zooming || greeting
-            ? { duration: zooming ? 0.85 : 0.65, ease: [0.16, 1, 0.3, 1] }
-            : { type: 'spring', stiffness: 60, damping: 18 }
-        }
-      >
-        <div className="hero-orb-wrap">
-          <Orb size="hero" zooming={zooming} onLocationClick={openFromPin} />
-        </div>
-      </motion.div>
-
-      <AnimatePresence>
-        {greeting ? (
-          <motion.div
-            className="hero-greeting-veil"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            aria-hidden="true"
-          />
-        ) : null}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {zooming ? (
-          <motion.div
-            className="hero-zoom-veil"
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: [0, 0.55, 0], scale: [0.7, 1.35, 1.8] }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            aria-hidden="true"
-          />
-        ) : null}
-      </AnimatePresence>
 
       <a className="hero-scroll" href="#overview" aria-label="Scroll to overview">
         <span aria-hidden="true">↓</span>
