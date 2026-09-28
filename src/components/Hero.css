@@ -150,60 +150,65 @@
   height: 100%;
 }
 
-.hero-peek {
+.hero-nav {
   position: absolute;
-  top: 52%;
+  top: 48%;
   z-index: 5;
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.45rem;
+  padding: 0.55rem 0.7rem;
   background: none;
   border: none;
   outline: none;
-  color: rgba(230, 242, 255, 0.55);
+  color: var(--paper-dim);
   cursor: pointer;
   transition:
     color 0.25s ease,
-    transform 0.35s var(--ease-out);
+    transform 0.3s var(--ease-out);
 }
 
-.hero-peek:focus-visible {
-  color: #fff;
-  outline: 1.5px solid rgba(201, 166, 107, 0.7);
-  outline-offset: 6px;
-  border-radius: 999px;
+.hero-nav span[aria-hidden='true'] {
+  font-size: 1.65rem;
+  line-height: 1;
+  font-weight: 300;
 }
 
-.hero-peek:hover {
-  color: #fff;
-  transform: scale(1.04);
-}
-
-.hero-peek--left {
-  left: 0;
-  transform: translate(-38%, -50%);
-}
-
-.hero-peek--left:hover {
-  transform: translate(-34%, -50%) scale(1.04);
-}
-
-.hero-peek--right {
-  right: 0;
-  transform: translate(38%, -50%);
-}
-
-.hero-peek--right:hover {
-  transform: translate(34%, -50%) scale(1.04);
-}
-
-.hero-peek-name {
+.hero-nav-label {
   font-size: 0.68rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-weight: 600;
-  writing-mode: horizontal-tb;
   white-space: nowrap;
+}
+
+.hero-nav:focus-visible {
+  color: var(--paper);
+  outline: 1.5px solid rgba(201, 166, 107, 0.7);
+  outline-offset: 6px;
+  border-radius: 0.5rem;
+}
+
+.hero-nav:hover {
+  color: var(--paper);
+}
+
+.hero-nav--left {
+  left: clamp(0.5rem, 2vw, 1.5rem);
+  transform: translateY(-50%);
+}
+
+.hero-nav--left:hover {
+  transform: translateY(-50%) translateX(-2px);
+}
+
+.hero-nav--right {
+  right: clamp(0.5rem, 2vw, 1.5rem);
+  transform: translateY(-50%);
+}
+
+.hero-nav--right:hover {
+  transform: translateY(-50%) translateX(2px);
 }
 
 .hero-scroll {
@@ -245,9 +250,7 @@
 }
 
 .orb--peek {
-  width: clamp(140px, 18vw, 220px);
-  height: clamp(140px, 18vw, 220px);
-  flex-shrink: 0;
+  display: none;
 }
 
 .orb-atmosphere {
@@ -330,10 +333,6 @@
   pointer-events: none;
 }
 
-.orb--peek .orb-texture {
-  animation-duration: 110s;
-}
-
 @keyframes earth-drift {
   from {
     transform: rotate(0deg) scale(1.08);
@@ -360,15 +359,7 @@
     margin-top: -4vh;
   }
 
-  .hero-peek--left {
-    transform: translate(-48%, -50%);
-  }
-
-  .hero-peek--right {
-    transform: translate(48%, -50%);
-  }
-
-  .hero-peek-name {
+  .hero-nav-label {
     display: none;
   }
 
@@ -389,13 +380,8 @@
     font-size: clamp(2.2rem, 11vw, 3.2rem);
   }
 
-  .hero-peek--left,
-  .hero-peek--right {
-    top: 58%;
-  }
-
-  .orb--peek {
-    width: 110px;
-    height: 110px;
+  .hero-nav {
+    top: auto;
+    bottom: 4.5rem;
   }
 }
