@@ -43,6 +43,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 0.5rem);
 }
 
 body {
@@ -84,8 +85,9 @@ img {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 5.5rem 0;
   position: relative;
+  scroll-margin-top: calc(var(--nav-h) + 0.75rem);
 }
 
 .section-title {

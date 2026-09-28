@@ -1,6 +1,10 @@
 .experience {
-  border-top: 1px solid var(--line);
-  background: linear-gradient(180deg, transparent, rgba(8, 14, 32, 0.45));
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(14, 14, 16, 0.45) 35%,
+    transparent 100%
+  );
 }
 
 .experience-eyebrow {

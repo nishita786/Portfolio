@@ -1,6 +1,12 @@
 .statement {
-  border-top: 1px solid var(--line);
-  background: linear-gradient(180deg, transparent, rgba(8, 14, 32, 0.55));
+  margin-top: -6vh;
+  padding-top: 7.5rem;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(10, 11, 13, 0.35) 18%,
+    transparent 55%
+  );
 }
 
 .statement-inner {
@@ -12,7 +18,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.36em;
   text-transform: uppercase;
-  color: var(--cyan);
+  color: var(--accent);
   margin-bottom: 0.75rem;
 }
 
@@ -22,7 +28,7 @@
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.05;
-  color: #fff;
+  color: var(--paper);
   margin-bottom: 2rem;
 }
 
@@ -33,7 +39,7 @@
 }
 
 .statement-copy {
-  color: var(--ice-muted);
+  color: var(--paper-muted);
   font-weight: 300;
   font-size: 1.02rem;
   line-height: 1.8;
@@ -41,7 +47,7 @@
 }
 
 .statement-copy--closing {
-  color: #fff;
+  color: var(--paper);
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-style: italic;
@@ -63,7 +69,7 @@
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--card);
-  color: var(--ice-muted);
+  color: var(--paper-muted);
   font-size: 0.84rem;
   letter-spacing: 0.06em;
   transition:
@@ -74,13 +80,18 @@
 }
 
 .statement-links a:hover {
-  color: #fff;
+  color: var(--paper);
   border-color: rgba(201, 166, 107, 0.45);
   transform: translateY(-2px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
+  .statement {
+    margin-top: -4vh;
+    padding-top: 5.5rem;
+  }
+
   .statement-inner {
     text-align: left;
   }
