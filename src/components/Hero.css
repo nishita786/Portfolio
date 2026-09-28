@@ -312,14 +312,14 @@
   margin-top: 0.55rem;
   padding: 0.85rem 1.85rem;
   border-radius: 999px;
-  background: linear-gradient(180deg, #f4eee3 0%, #e4d2b4 55%, #c9a66b 100%);
-  color: #1a140c;
+  background: linear-gradient(180deg, #8bbbff 0%, #6ea8fe 55%, #4f8ef0 100%);
+  color: #0a0d14;
   font-size: var(--fs-button);
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   box-shadow:
-    0 0 0 1px rgba(255, 240, 220, 0.25),
+    0 0 0 1px rgba(110, 168, 254, 0.35),
     0 10px 28px rgba(0, 0, 0, 0.4);
   transition:
     transform 0.25s var(--ease-out),
@@ -329,7 +329,7 @@
 .hero-cta:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow:
-    0 0 0 1px rgba(255, 240, 220, 0.4),
+    0 0 0 1px rgba(110, 168, 254, 0.55),
     0 14px 34px rgba(0, 0, 0, 0.45);
 }
 
@@ -344,7 +344,7 @@
   background: none;
   border: none;
   outline: none;
-  color: var(--paper-dim);
+  color: rgba(110, 168, 254, 0.55);
   cursor: pointer;
   transition:
     color 0.25s ease,
@@ -355,25 +355,33 @@
   font-size: 1.65rem;
   line-height: 1;
   font-weight: 300;
+  color: var(--accent);
 }
 
 .hero-nav-label {
+  font-family: var(--font-sans);
   font-size: var(--fs-caption);
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-weight: 600;
   white-space: nowrap;
+  color: rgba(110, 168, 254, 0.72);
 }
 
 .hero-nav:focus-visible {
-  color: var(--paper);
-  outline: 1.5px solid rgba(201, 166, 107, 0.7);
+  color: var(--accent);
+  outline: 1.5px solid rgba(110, 168, 254, 0.7);
   outline-offset: 6px;
   border-radius: 0.5rem;
 }
 
 .hero-nav:hover {
-  color: var(--paper);
+  color: var(--accent);
+}
+
+.hero-nav:hover .hero-nav-label,
+.hero-nav:focus-visible .hero-nav-label {
+  color: var(--accent);
 }
 
 .hero-nav--left {
@@ -406,8 +414,8 @@
   display: grid;
   place-items: center;
   background: rgba(10, 11, 13, 0.72);
-  border: 1px solid rgba(220, 200, 170, 0.22);
-  color: var(--paper);
+  border: 1px solid rgba(110, 168, 254, 0.28);
+  color: var(--accent);
   font-size: var(--fs-body);
   backdrop-filter: blur(8px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
