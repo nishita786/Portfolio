@@ -336,28 +336,45 @@
   pointer-events: none;
 }
 
-/* Location pin — Karnataka, India */
+/* Location pin — Karnataka, India (click → Overview zoom) */
 .orb-location {
   position: absolute;
-  /* Southern India / Karnataka on India-facing globe */
   left: 51.5%;
   top: 54.5%;
   z-index: 6;
-  width: 0;
-  height: 0;
-  pointer-events: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: -1.375rem 0 0 -1.375rem;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.orb-location:focus-visible {
+  outline: 2px solid rgba(201, 166, 107, 0.85);
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+.orb-location-hit {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
 }
 
 .orb-location-pulse {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
   width: 2.4rem;
   height: 2.4rem;
   margin: -1.2rem 0 0 -1.2rem;
   border-radius: 50%;
   border: 1.5px solid rgba(201, 166, 107, 0.7);
   animation: location-pulse 2.4s ease-out infinite;
+  pointer-events: none;
 }
 
 .orb-location-pulse--delay {
@@ -366,18 +383,26 @@
 
 .orb-location-marker {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
   width: 1.15rem;
   height: 1.15rem;
   margin-left: -0.575rem;
-  margin-top: -1.55rem;
+  margin-top: -1.15rem;
   background: var(--accent);
   border: 2px solid #f4eee3;
   border-radius: 50% 50% 50% 0;
   transform: rotate(-45deg);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
   animation: pin-bob 2.8s ease-in-out infinite;
+  pointer-events: none;
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s ease;
+}
+
+.orb-location:hover .orb-location-marker {
+  animation: none;
+  transform: rotate(-45deg) scale(1.12);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
 }
 
 .orb-location-marker::after {
@@ -386,6 +411,40 @@
   inset: 22%;
   border-radius: 50%;
   background: #1a140c;
+}
+
+.orb.is-zooming .orb-location-pulse,
+.orb.is-zooming .orb-location-marker {
+  animation: none;
+}
+
+.hero-stage.is-zooming {
+  pointer-events: none;
+  z-index: 8;
+}
+
+.hero-content.is-zooming {
+  pointer-events: none;
+}
+
+.hero-zoom-veil {
+  position: absolute;
+  inset: -10%;
+  z-index: 7;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 51% 62%,
+    rgba(201, 166, 107, 0.28),
+    rgba(10, 11, 13, 0.55) 42%,
+    rgba(5, 6, 7, 0.92) 70%
+  );
+}
+
+.hero.is-zooming .hero-nav,
+.hero.is-zooming .hero-scroll {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
 }
 
 @keyframes earth-idle {
@@ -469,6 +528,12 @@
     margin-left: calc(min(560px, 140vw) / -2);
   }
 
+  .orb-location {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin: -1.2rem 0 0 -1.2rem;
+  }
+
   .orb-location-pulse {
     width: 2rem;
     height: 2rem;
@@ -479,6 +544,6 @@
     width: 1rem;
     height: 1rem;
     margin-left: -0.5rem;
-    margin-top: -1.35rem;
+    margin-top: -1rem;
   }
 }
