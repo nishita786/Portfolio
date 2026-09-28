@@ -12,13 +12,17 @@
 }
 
 .footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
 .footer-links {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.1rem;
 }
 
 .footer-links a {
@@ -28,7 +32,7 @@
 }
 
 .footer-links a:hover {
-  color: var(--accent);
+  color: var(--emerald);
 }
 
 .footer-copy {
@@ -37,7 +41,7 @@
   font-weight: 300;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;

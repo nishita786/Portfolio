@@ -13,40 +13,40 @@ export function Projects() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.55 }}
         >
-          <p className="section-label">Selected Work</p>
-          <h2 className="section-title">Projects in motion.</h2>
+          <p className="section-label">What I build</p>
+          <h2 className="section-title">Selected work.</h2>
           <p className="section-lead">
-            Systems, assistants, and analytics — a few builds that show how I think and ship.
+            Systems, assistants, and analytics — builds that show how I think and ship.
           </p>
         </motion.div>
 
-        <div className="projects-list">
+        <div className="projects-grid">
           {profile.projects.map((project, i) => (
             <motion.a
               key={project.name}
               href={project.href}
               target="_blank"
               rel="noreferrer"
-              className="project-row"
+              className="project-card"
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.45, delay: i * 0.05 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.45, delay: i * 0.04 }}
             >
-              <div className="project-index" style={{ color: project.accent }}>
-                {String(i + 1).padStart(2, '0')}
+              <div className="project-thumb" aria-hidden="true">
+                <span>{String(i + 1).padStart(2, '0')}</span>
               </div>
               <div className="project-body">
                 <h3>{project.name}</h3>
                 <p>{project.blurb}</p>
+                <ul>
+                  {project.stack.map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
               </div>
-              <ul className="project-stack">
-                {project.stack.map((tech) => (
-                  <li key={tech}>{tech}</li>
-                ))}
-              </ul>
-              <span className="project-arrow" aria-hidden="true">
-                ↗
+              <span className="project-go" aria-hidden="true">
+                →
               </span>
             </motion.a>
           ))}

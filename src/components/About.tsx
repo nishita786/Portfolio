@@ -21,13 +21,16 @@ export function About() {
               <span className="about-meta-label">Education</span>
               <strong>{profile.education.degree}</strong>
               <span>
+                Specialization in {profile.education.specialization}
+              </span>
+              <span>
                 {profile.education.school} · {profile.education.year}
               </span>
             </div>
             <div>
               <span className="about-meta-label">Based in</span>
               <strong>{profile.location}</strong>
-              <span>Open to SDE · Backend · AI/ML</span>
+              <span>Open to SDE · Data · Backend</span>
             </div>
           </div>
         </motion.div>
@@ -40,11 +43,17 @@ export function About() {
           transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
         >
           {profile.achievements.map((item) => (
-            <article key={item.label} className="about-stat">
+            <a
+              key={item.label}
+              className="about-stat"
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+            >
               <span className="about-stat-value">{item.value}</span>
               <span className="about-stat-label">{item.label}</span>
               <span className="about-stat-detail">{item.detail}</span>
-            </article>
+            </a>
           ))}
         </motion.div>
       </div>

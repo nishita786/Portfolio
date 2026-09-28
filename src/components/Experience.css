@@ -22,7 +22,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--emerald);
   margin-bottom: 0.75rem;
 }
 
@@ -63,8 +63,8 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 10px rgba(125, 211, 252, 0.6);
+  background: var(--emerald);
+  box-shadow: 0 0 10px rgba(6, 214, 160, 0.6);
 }
 
 @media (max-width: 800px) {

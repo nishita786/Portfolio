@@ -49,16 +49,17 @@ export function Experience() {
             <div className="experience-meta">
               <span className="experience-period">{profile.education.year}</span>
               <h3>{profile.education.degree}</h3>
-              <p className="experience-company">{profile.education.school}</p>
+              <p className="experience-company">
+                {profile.education.school} · {profile.education.specialization}
+              </p>
             </div>
             <ul className="experience-points">
               <li>
-                Focused on software engineering, data structures, and building production-minded
-                systems across backend and ML.
+                Specializing in Data Science with a focus on software engineering, algorithms, and
+                building production-minded systems.
               </li>
               <li>
-                Competitive programming practice with CodeChef 5★ and Codeforces Candidate Master
-                peak ratings.
+                Active on LeetCode and HackerRank, with ongoing competitive practice on CodeChef.
               </li>
             </ul>
           </motion.article>

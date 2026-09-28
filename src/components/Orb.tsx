@@ -6,7 +6,7 @@ type OrbProps = {
   className?: string
 }
 
-export function Orb({ hue = 195, className = '' }: OrbProps) {
+export function Orb({ hue = 160, className = '' }: OrbProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { heroSlides } from '../data/profile'
+import { heroSlides, profile } from '../data/profile'
 import { Orb } from './Orb'
 import './Hero.css'
 
@@ -85,7 +85,16 @@ export function Hero() {
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="hero-kicker">{slide.label}</p>
-            <h1 className="hero-title">{slide.title}</h1>
+            <h1 className="hero-title">
+              {slide.title === 'Nishita' ? (
+                <>
+                  Nishi<span className="hero-title-accent">ta</span>
+                </>
+              ) : (
+                slide.title
+              )}
+            </h1>
+            <p className="hero-role">{profile.title}</p>
             <p className="hero-desc">{slide.description}</p>
             <a className="pill hero-cta" href={slide.target}>
               {slide.cta}
@@ -106,6 +115,12 @@ export function Hero() {
             />
           ))}
         </div>
+
+        <ul className="hero-tools" aria-label="Core tools">
+          {profile.tools.map((tool) => (
+            <li key={tool}>{tool}</li>
+          ))}
+        </ul>
       </div>
 
       <AnimatePresence mode="wait">

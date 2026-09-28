@@ -3,23 +3,29 @@ export const profile = {
   firstName: 'Nishita',
   brand: 'nishita',
   brandAccent: 'ta',
-  title: 'Software Engineer',
+  title: 'CSE · Data Science',
   location: 'Bengaluru, India',
   email: 'nishitakm786@gmail.com',
   tagline:
-    'Building scalable backends, intelligent systems, and sharp problem-solving instincts — from REST APIs to competitive programming.',
+    'Building with data, backends, and sharp problem-solving — from ML pipelines to clean APIs.',
   summary:
-    'Information Science & Engineering graduate (2026) at Bangalore Institute of Technology. Passionate about software engineering, backend development, and machine learning. Open to SDE / Backend / AI-ML roles.',
+    'B.E. Computer Science and Engineering student specializing in Data Science at MVJ College of Engineering. Passionate about software engineering, data systems, and machine learning. Open to SDE / Data / Backend roles.',
   links: {
     linkedin: 'https://www.linkedin.com/in/nishita-kumari-profile',
     github: 'https://github.com/nishita786',
     email: 'mailto:nishitakm786@gmail.com',
+    twitter: 'https://x.com/nishitakm786',
+    leetcode: 'https://leetcode.com/u/nishita786/',
+    hackerrank: 'https://www.hackerrank.com/nishita786',
+    codechef: 'https://www.codechef.com/users/nishita786',
   },
   education: {
-    degree: 'B.E. Information Science & Engineering',
-    school: 'Bangalore Institute of Technology',
+    degree: 'B.E. Computer Science & Engineering',
+    specialization: 'Data Science',
+    school: 'MVJ College of Engineering',
     year: '2026',
   },
+  tools: ['Python', 'C++', 'SQL', 'JavaScript', 'React', 'Node.js', 'PyTorch', 'MongoDB'],
   experience: [
     {
       role: 'Backend Developer Intern',
@@ -40,15 +46,13 @@ export const profile = {
         'Distributed fintech compliance platform with microservices, async messaging, and secure authentication.',
       stack: ['Node.js', 'Microservices', 'Auth'],
       href: 'https://github.com/nishita786/kyc-aml-orchestration',
-      accent: '#38bdf8',
     },
     {
       name: 'MedPal',
       blurb:
-        'AI medical assistant using NLP and retrieval to interpret symptoms and surface informative health insights.',
+        'AI medical assistant using NLP and retrieval to interpret symptoms and surface health insights.',
       stack: ['TypeScript', 'NLP', 'AI'],
       href: 'https://github.com/nishita786/medpal',
-      accent: '#67e8f9',
     },
     {
       name: 'ZestRoute',
@@ -56,7 +60,6 @@ export const profile = {
         'Delivery analytics platform on AWS S3, Snowflake, SQL, and Power BI for operational visibility.',
       stack: ['Python', 'Snowflake', 'Power BI'],
       href: 'https://github.com/nishita786/ZestRoute',
-      accent: '#7dd3fc',
     },
     {
       name: 'Collaborative Whiteboard',
@@ -64,7 +67,6 @@ export const profile = {
         'Multi-user real-time drawing app with React, Node, Express, and WebSockets.',
       stack: ['React', 'WebSockets', 'MongoDB'],
       href: 'https://github.com/nishita786',
-      accent: '#a5f3fc',
     },
     {
       name: 'AI Document Summarizer',
@@ -72,7 +74,6 @@ export const profile = {
         'LangChain + Python + Streamlit pipeline that summarizes large PDFs with LLMs.',
       stack: ['LangChain', 'Python', 'Streamlit'],
       href: 'https://github.com/nishita786',
-      accent: '#22d3ee',
     },
     {
       name: 'Credit Risk Model',
@@ -80,22 +81,21 @@ export const profile = {
         'Machine learning pipeline with PyTorch and XGBoost to classify credit risk from financial data.',
       stack: ['PyTorch', 'XGBoost', 'ML'],
       href: 'https://github.com/nishita786',
-      accent: '#06b6d4',
     },
   ],
   skills: {
     languages: ['C++', 'Python', 'JavaScript', 'SQL'],
     frontend: ['React.js', 'HTML5', 'CSS3'],
     backend: ['Node.js', 'Express.js', 'REST APIs', 'JWT', 'Socket.io'],
-    data: ['MongoDB', 'MySQL', 'PyTorch', 'XGBoost', 'LangChain'],
-    tools: ['Docker', 'Kubernetes', 'Jenkins', 'AWS', 'Git', 'Linux'],
+    data: ['MongoDB', 'MySQL', 'PyTorch', 'XGBoost', 'LangChain', 'Power BI'],
+    tools: ['Docker', 'Git', 'Linux', 'AWS'],
     core: ['DSA', 'OOP', 'DBMS', 'OS', 'Networks', 'System Design'],
   },
   achievements: [
-    { label: 'CodeChef', value: '5★', detail: 'Peak 2001' },
-    { label: 'Codeforces', value: 'CM', detail: 'Peak 1909' },
-    { label: 'Problems', value: '1000+', detail: 'Solved' },
-    { label: 'CF Round', value: '65th', detail: 'of 25k+' },
+    { label: 'LeetCode', value: 'Active', detail: 'Problem solving', href: 'https://leetcode.com/u/nishita786/' },
+    { label: 'HackerRank', value: 'Certified', detail: 'Software Engineer', href: 'https://www.hackerrank.com/nishita786' },
+    { label: 'CodeChef', value: '★', detail: 'Competitive coding', href: 'https://www.codechef.com/users/nishita786' },
+    { label: 'DSA', value: 'Daily', detail: 'Practice habit', href: 'https://github.com/nishita786/leetcode-solutions' },
   ],
 } as const
 
@@ -112,42 +112,42 @@ export type HeroSlide = {
 export const heroSlides: HeroSlide[] = [
   {
     id: 'about',
-    label: 'Engineer',
+    label: 'Data Science',
     title: 'Nishita',
     description:
-      'Software engineer crafting backends, intelligent systems, and clean architecture — with a competitive programming edge.',
+      'CSE student specializing in Data Science — crafting backends, intelligent systems, and clean problem-solving.',
     cta: 'Get Started',
     target: '#about',
-    orbHue: 195,
+    orbHue: 160,
   },
   {
     id: 'work',
     label: 'Selected',
     title: 'Work',
     description:
-      'From KYC orchestration and AI assistants to real-time collaboration — projects that ship ideas into systems.',
+      'From KYC orchestration and AI assistants to analytics platforms — projects that turn ideas into systems.',
     cta: 'View Projects',
     target: '#projects',
-    orbHue: 185,
+    orbHue: 155,
   },
   {
     id: 'path',
     label: 'Career',
     title: 'Path',
     description:
-      'Backend intern building REST APIs, auth, and reliable services — open to SDE roles that move the needle.',
+      'Backend intern building REST APIs, auth, and reliable services — open to SDE and data roles.',
     cta: 'See Experience',
     target: '#experience',
-    orbHue: 205,
+    orbHue: 168,
   },
   {
     id: 'reach',
     label: 'Connect',
     title: 'Reach',
     description:
-      'Let’s talk systems, algorithms, or your next product. Always happy to connect with builders and recruiters.',
+      'Let’s talk systems, data, or your next product. Always happy to connect with builders and recruiters.',
     cta: 'Say Hello',
     target: '#contact',
-    orbHue: 175,
+    orbHue: 150,
   },
 ]

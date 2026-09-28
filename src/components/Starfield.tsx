@@ -48,7 +48,7 @@ export function Starfield() {
       for (const star of stars) {
         const twinkle = 0.35 + Math.sin(t * star.s + star.a * 12) * 0.35
         ctx.beginPath()
-        ctx.fillStyle = `rgba(210, 235, 255, ${twinkle})`
+        ctx.fillStyle = `rgba(180, 255, 230, ${twinkle})`
         ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2)
         ctx.fill()
       }
