@@ -4,9 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
-  padding: calc(var(--nav-h) + 1.25rem) 1.25rem 4.5rem;
+  padding: calc(var(--nav-h) + 2rem) 1.25rem 2rem;
+  gap: 1.5rem;
 }
 
 .hero-tech {
@@ -20,14 +21,14 @@
 .hero-tech-glow {
   position: absolute;
   left: 50%;
-  top: 42%;
+  top: 58%;
   width: min(720px, 90vw);
-  height: min(420px, 55vh);
+  height: min(360px, 45vh);
   transform: translate(-50%, -50%);
   background: radial-gradient(
     ellipse at center,
-    rgba(110, 168, 254, 0.16),
-    rgba(110, 168, 254, 0.04) 42%,
+    rgba(110, 168, 254, 0.14),
+    rgba(110, 168, 254, 0.03) 42%,
     transparent 70%
   );
   filter: blur(8px);
@@ -62,14 +63,13 @@
 }
 
 .hero-thought {
-  position: absolute;
-  left: 50%;
-  bottom: 6%;
-  top: auto;
+  position: relative;
   width: min(920px, 92vw);
-  transform: translateX(-50%);
+  margin-top: auto;
+  margin-bottom: 3.5rem;
   z-index: 2;
-  opacity: 0.88;
+  opacity: 0.9;
+  flex-shrink: 0;
 }
 
 .hero-thought-svg {
@@ -211,7 +211,7 @@
   z-index: 4;
   text-align: center;
   max-width: 40rem;
-  margin-top: -6vh;
+  margin-top: clamp(1.5rem, 8vh, 5rem);
   pointer-events: none;
 }
 
@@ -431,7 +431,7 @@
 
   .hero-thought {
     width: min(920px, 96vw);
-    bottom: 5%;
+    margin-bottom: 3rem;
   }
 
   .hero-thought-text text {
