@@ -47,108 +47,131 @@
 .hero-tech-floor {
   position: absolute;
   left: 50%;
-  bottom: 8%;
+  bottom: 6%;
   width: min(980px, 130vw);
-  height: 42%;
+  height: 34%;
   transform: translateX(-50%) perspective(700px) rotateX(62deg);
   transform-origin: center top;
   background-image:
-    linear-gradient(rgba(110, 168, 254, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(110, 168, 254, 0.12) 1px, transparent 1px);
+    linear-gradient(rgba(110, 168, 254, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(110, 168, 254, 0.1) 1px, transparent 1px);
   background-size: 48px 48px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 85%);
-  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 85%);
-  opacity: 0.55;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45), transparent 85%);
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45), transparent 85%);
+  opacity: 0.4;
 }
 
-.hero-tech-net {
+.hero-thought {
   position: absolute;
   left: 50%;
-  top: 46%;
-  width: min(980px, 118vw);
-  height: auto;
+  top: 64%;
+  width: min(980px, 94vw);
   transform: translate(-50%, -50%);
-  overflow: visible;
+  z-index: 2;
+  opacity: 0.82;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, #000 35%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, #000 35%, transparent 85%);
 }
 
-.hero-tech-net--back {
-  width: min(1100px, 130vw);
-  opacity: 0.35;
-  filter: blur(0.4px);
+.hero-thought-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.9;
 }
 
-.hero-tech-links path,
-.hero-tech-links--faint path {
+.hero-thought-links path {
   fill: none;
-  stroke: rgba(110, 168, 254, 0.38);
-  stroke-width: 1.15;
+  stroke: rgba(110, 168, 254, 0.32);
+  stroke-width: 1.2;
   stroke-linecap: round;
-  stroke-dasharray: 5 12;
-  animation: tech-dash 16s linear infinite;
+  stroke-dasharray: 5 11;
+  animation: tech-dash 18s linear infinite;
 }
 
-.hero-tech-links--faint path {
-  stroke: rgba(110, 168, 254, 0.18);
-  stroke-dasharray: 3 14;
-  animation-duration: 28s;
-  animation-direction: reverse;
+.hero-thought-links path.is-main {
+  stroke: rgba(110, 168, 254, 0.55);
+  stroke-width: 1.6;
+  stroke-dasharray: 2 8;
+  animation-duration: 12s;
 }
 
-.hero-tech-nodes circle {
-  fill: rgba(238, 243, 251, 0.9);
-  stroke: rgba(110, 168, 254, 0.65);
-  stroke-width: 1.5;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: tech-pulse 3.4s ease-in-out infinite;
+.hero-thought-nodes circle {
+  fill: rgba(238, 243, 251, 0.75);
+  stroke: rgba(110, 168, 254, 0.5);
+  stroke-width: 1.4;
 }
 
-.hero-tech-nodes circle.is-hot {
+.hero-thought-nodes circle.is-seed {
+  fill: rgba(238, 243, 251, 0.35);
+  stroke: rgba(110, 168, 254, 0.35);
+}
+
+.hero-thought-nodes circle.is-hot {
   fill: var(--accent);
   stroke: rgba(238, 243, 251, 0.55);
-  filter: drop-shadow(0 0 8px rgba(110, 168, 254, 0.55));
+  filter: drop-shadow(0 0 8px rgba(110, 168, 254, 0.45));
 }
 
-.hero-tech-nodes circle:nth-child(2n) {
-  animation-delay: 0.5s;
+.hero-thought-nodes circle.is-core {
+  fill: #dce9ff;
+  stroke: var(--accent);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 14px rgba(110, 168, 254, 0.55));
 }
 
-.hero-tech-nodes circle:nth-child(3n) {
-  animation-delay: 1.1s;
-}
-
-.hero-tech-rings circle {
+.hero-thought-rings circle {
   fill: none;
   stroke: rgba(110, 168, 254, 0.28);
   stroke-width: 1;
-  animation: ring-pulse 3.8s ease-out infinite;
   transform-box: fill-box;
   transform-origin: center;
+  animation: ring-pulse 4s ease-out infinite;
 }
 
-.hero-tech-rings circle:nth-child(2) {
-  animation-delay: 0.8s;
+.hero-thought-rings circle:nth-child(2) {
+  animation-delay: 0.9s;
 }
 
-.hero-tech-rings circle:nth-child(3) {
-  animation-delay: 1.5s;
+.hero-thought-rings circle:nth-child(3) {
+  animation-delay: 1.6s;
 }
 
-.hero-tech-scan {
+.hero-thought-labels {
   position: absolute;
-  left: 10%;
-  right: 10%;
-  top: 18%;
-  height: 2px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(110, 168, 254, 0.45),
-    transparent
-  );
-  box-shadow: 0 0 18px rgba(110, 168, 254, 0.35);
-  animation: tech-scan 7s ease-in-out infinite;
-  opacity: 0.55;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-thought-labels span {
+  position: absolute;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(238, 243, 251, 0.42);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.hero-thought-labels span.is-strong {
+  color: rgba(238, 243, 251, 0.72);
+  letter-spacing: 0.14em;
+  font-weight: 600;
+}
+
+.hero-thought-labels span.is-core {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.hero-thesis {
+  margin-top: 0.35rem;
+  max-width: 34ch;
+  font-size: var(--fs-body-sm);
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--paper-dim);
 }
 
 @keyframes tech-dash {
@@ -198,6 +221,7 @@
   z-index: 4;
   text-align: center;
   max-width: 40rem;
+  margin-top: -10vh;
   pointer-events: none;
 }
 

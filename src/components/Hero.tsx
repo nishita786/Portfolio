@@ -45,61 +45,98 @@ export function Hero({ mouseX, mouseY }: HeroProps) {
         <div className="hero-tech-glow" />
         <div className="hero-tech-grid" />
         <div className="hero-tech-floor" />
-        <svg className="hero-tech-net hero-tech-net--back" viewBox="0 0 900 560" preserveAspectRatio="xMidYMid slice">
-          <g className="hero-tech-links hero-tech-links--faint">
-            <path d="M40 80 L180 160 L340 60 L520 150 L720 40 L860 130" />
-            <path d="M60 420 L220 340 L400 430 L600 320 L780 410 L880 300" />
-            <path d="M180 160 L220 340 L340 60 L400 430 L520 150 L600 320" />
-          </g>
-        </svg>
-        <svg className="hero-tech-net" viewBox="0 0 900 560" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="packet" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="rgba(110,168,254,0)" />
-              <stop offset="50%" stopColor="rgba(238,243,251,0.95)" />
-              <stop offset="100%" stopColor="rgba(110,168,254,0)" />
-            </linearGradient>
-          </defs>
-          <g className="hero-tech-links">
-            <path id="link-a" d="M110 140 L250 210 L410 120 L570 230 L760 150" />
-            <path id="link-b" d="M150 390 L290 300 L470 360 L650 280 L820 370" />
-            <path d="M250 210 L290 300 L410 120 L470 360 L570 230" />
-            <path d="M110 140 L150 390" />
-            <path d="M760 150 L820 370" />
-            <path d="M410 120 L470 360" />
-          </g>
-          <g className="hero-tech-packets">
-            <circle r="3.5" fill="url(#packet)">
-              <animateMotion dur="4.5s" repeatCount="indefinite" path="M110 140 L250 210 L410 120 L570 230 L760 150" />
-            </circle>
-            <circle r="3" fill="url(#packet)">
-              <animateMotion dur="5.8s" begin="1.2s" repeatCount="indefinite" path="M150 390 L290 300 L470 360 L650 280 L820 370" />
-            </circle>
-            <circle r="2.5" fill="url(#packet)">
-              <animateMotion dur="3.8s" begin="0.6s" repeatCount="indefinite" path="M250 210 L290 300 L410 120 L470 360 L570 230" />
-            </circle>
-          </g>
-          <g className="hero-tech-nodes">
-            <circle cx="110" cy="140" r="3.5" />
-            <circle cx="250" cy="210" r="5" className="is-hot" />
-            <circle cx="410" cy="120" r="3.5" />
-            <circle cx="570" cy="230" r="5.5" className="is-hot" />
-            <circle cx="760" cy="150" r="3.5" />
-            <circle cx="150" cy="390" r="3.5" />
-            <circle cx="290" cy="300" r="4.5" className="is-hot" />
-            <circle cx="470" cy="360" r="4" />
-            <circle cx="650" cy="280" r="3.5" />
-            <circle cx="820" cy="370" r="4.5" className="is-hot" />
-            <circle cx="340" cy="250" r="2.5" />
-            <circle cx="620" cy="180" r="2.5" />
-          </g>
-          <g className="hero-tech-rings">
-            <circle cx="570" cy="230" r="18" />
-            <circle cx="290" cy="300" r="14" />
-            <circle cx="250" cy="210" r="16" />
-          </g>
-        </svg>
-        <div className="hero-tech-scan" />
+
+        <div className="hero-thought">
+          <svg className="hero-thought-svg" viewBox="0 0 1000 420" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="rgba(110,168,254,0)" />
+                <stop offset="45%" stopColor="rgba(238,243,251,0.95)" />
+                <stop offset="100%" stopColor="rgba(110,168,254,0)" />
+              </linearGradient>
+            </defs>
+
+            <g className="hero-thought-links">
+              <path d="M90 80 L210 160" />
+              <path d="M70 210 L210 160" />
+              <path d="M110 300 L210 160" />
+              <path className="is-main" d="M210 160 L390 210 L570 210 L750 210 L910 210" />
+              <path d="M390 210 L390 320" />
+              <path d="M570 210 L570 100" />
+              <path d="M750 210 L750 320" />
+            </g>
+
+            <g className="hero-thought-packets">
+              <circle r="3.5" fill="url(#flow)">
+                <animateMotion
+                  dur="5s"
+                  repeatCount="indefinite"
+                  path="M210 160 L390 210 L570 210 L750 210 L910 210"
+                />
+              </circle>
+              <circle r="2.5" fill="url(#flow)">
+                <animateMotion
+                  dur="6.2s"
+                  begin="1.4s"
+                  repeatCount="indefinite"
+                  path="M90 80 L210 160 L390 210"
+                />
+              </circle>
+              <circle r="2.5" fill="url(#flow)">
+                <animateMotion
+                  dur="5.6s"
+                  begin="0.8s"
+                  repeatCount="indefinite"
+                  path="M110 300 L210 160 L390 210 L570 210"
+                />
+              </circle>
+            </g>
+
+            <g className="hero-thought-nodes">
+              <circle className="is-seed" cx="90" cy="80" r="4" />
+              <circle className="is-seed" cx="70" cy="210" r="3.5" />
+              <circle className="is-seed" cx="110" cy="300" r="4" />
+              <circle className="is-hot" cx="210" cy="160" r="7" />
+              <circle className="is-hot" cx="390" cy="210" r="8" />
+              <circle className="is-hot" cx="570" cy="210" r="8" />
+              <circle className="is-hot" cx="750" cy="210" r="8" />
+              <circle className="is-core" cx="910" cy="210" r="10" />
+              <circle cx="390" cy="320" r="4" />
+              <circle cx="570" cy="100" r="4" />
+              <circle cx="750" cy="320" r="4" />
+            </g>
+
+            <g className="hero-thought-rings">
+              <circle cx="210" cy="160" r="20" />
+              <circle cx="570" cy="210" r="24" />
+              <circle cx="910" cy="210" r="28" />
+            </g>
+          </svg>
+
+          <div className="hero-thought-labels">
+            <span style={{ left: '8%', top: '12%' }}>curiosity</span>
+            <span style={{ left: '4%', top: '46%' }}>questions</span>
+            <span style={{ left: '8%', top: '72%' }}>signals</span>
+            <span className="is-strong" style={{ left: '18%', top: '28%' }}>
+              thought
+            </span>
+            <span className="is-strong" style={{ left: '34%', top: '40%' }}>
+              data
+            </span>
+            <span className="is-strong" style={{ left: '51%', top: '40%' }}>
+              model
+            </span>
+            <span className="is-strong" style={{ left: '68%', top: '40%' }}>
+              system
+            </span>
+            <span className="is-core" style={{ left: '84%', top: '38%' }}>
+              insight
+            </span>
+            <span style={{ left: '34%', top: '74%' }}>clean</span>
+            <span style={{ left: '51%', top: '14%' }}>learn</span>
+            <span style={{ left: '68%', top: '74%' }}>ship</span>
+          </div>
+        </div>
       </div>
 
       <motion.div
@@ -122,6 +159,9 @@ export function Hero({ mouseX, mouseY }: HeroProps) {
                 <h1 className="hero-title hero-title--intro">{active.title}</h1>
                 <p className="hero-role" aria-live="polite">
                   <Typewriter phrases={heroRoles} />
+                </p>
+                <p className="hero-thesis">
+                  Turning scattered thoughts into systems that learn, decide, and ship.
                 </p>
               </>
             ) : (
