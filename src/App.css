@@ -3,6 +3,17 @@
   min-height: 100vh;
 }
 
+.ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 55% 40% at 50% 18%, rgba(6, 214, 160, 0.14), transparent 60%),
+    radial-gradient(ellipse 40% 30% at 15% 60%, rgba(12, 65, 55, 0.45), transparent 55%),
+    radial-gradient(ellipse 35% 28% at 85% 70%, rgba(6, 214, 160, 0.06), transparent 50%);
+}
+
 .boot-veil {
   position: fixed;
   inset: 0;

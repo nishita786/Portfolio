@@ -6,19 +6,15 @@ export function Projects() {
   return (
     <section className="section projects" id="projects">
       <div className="container">
-        <motion.div
-          className="projects-head"
-          initial={{ opacity: 0, y: 20 }}
+        <motion.h2
+          className="projects-heading"
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.55 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.45 }}
         >
-          <p className="section-label">What I build</p>
-          <h2 className="section-title">Selected work.</h2>
-          <p className="section-lead">
-            Systems, assistants, and analytics — builds that show how I think and ship.
-          </p>
-        </motion.div>
+          what I do
+        </motion.h2>
 
         <div className="projects-grid">
           {profile.projects.map((project, i) => (
@@ -28,22 +24,17 @@ export function Projects() {
               target="_blank"
               rel="noreferrer"
               className="project-card"
-              initial={{ opacity: 0, y: 18 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.45, delay: i * 0.04 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.4, delay: i * 0.04 }}
             >
               <div className="project-thumb" aria-hidden="true">
                 <span>{String(i + 1).padStart(2, '0')}</span>
               </div>
               <div className="project-body">
                 <h3>{project.name}</h3>
-                <p>{project.blurb}</p>
-                <ul>
-                  {project.stack.map((tech) => (
-                    <li key={tech}>{tech}</li>
-                  ))}
-                </ul>
+                <p>{project.stack.join(' · ')}</p>
               </div>
               <span className="project-go" aria-hidden="true">
                 →
@@ -51,15 +42,6 @@ export function Projects() {
             </motion.a>
           ))}
         </div>
-
-        <a
-          className="pill pill-ghost projects-more"
-          href={profile.links.github}
-          target="_blank"
-          rel="noreferrer"
-        >
-          All on GitHub
-        </a>
       </div>
     </section>
   )

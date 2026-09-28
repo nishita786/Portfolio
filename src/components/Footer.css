@@ -1,5 +1,5 @@
 .footer {
-  padding: 2rem 0 2.5rem;
+  padding: 1.5rem 0 2.25rem;
   border-top: 1px solid var(--line);
 }
 
@@ -12,38 +12,17 @@
 }
 
 .footer-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.1rem;
-}
-
-.footer-links a {
-  font-size: 0.85rem;
-  color: var(--text-dim);
-  transition: color 0.25s ease;
-}
-
-.footer-links a:hover {
+.footer-brand span {
   color: var(--emerald);
 }
 
 .footer-copy {
   font-size: 0.8rem;
-  color: var(--text-dim);
+  color: var(--polar-dim);
   font-weight: 300;
-}
-
-@media (max-width: 700px) {
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }

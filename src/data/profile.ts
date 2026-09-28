@@ -3,7 +3,7 @@ export const profile = {
   firstName: 'Nishita',
   brand: 'nishita',
   brandAccent: 'ta',
-  title: 'CSE · Data Science',
+  title: 'Data Science',
   location: 'Bengaluru, India',
   email: 'nishitakm786@gmail.com',
   tagline:

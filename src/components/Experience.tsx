@@ -6,32 +6,32 @@ export function Experience() {
   return (
     <section className="section experience" id="experience">
       <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <motion.h2
+          className="experience-heading"
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.55 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.45 }}
         >
-          <p className="section-label">Experience</p>
-          <h2 className="section-title">The path so far.</h2>
-        </motion.div>
+          my path
+        </motion.h2>
 
         <div className="experience-list">
           {profile.experience.map((job) => (
             <motion.article
               key={job.company}
               className="experience-item"
-              initial={{ opacity: 0, y: 22 }}
+              initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{ duration: 0.55 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5 }}
             >
               <div className="experience-meta">
-                <span className="experience-period">{job.period}</span>
+                <span>{job.period}</span>
                 <h3>{job.role}</h3>
-                <p className="experience-company">{job.company}</p>
+                <p>{job.company}</p>
               </div>
-              <ul className="experience-points">
+              <ul>
                 {job.highlights.map((point) => (
                   <li key={point}>{point}</li>
                 ))}
@@ -40,27 +40,25 @@ export function Experience() {
           ))}
 
           <motion.article
-            className="experience-item experience-item--edu"
-            initial={{ opacity: 0, y: 22 }}
+            className="experience-item"
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.35 }}
-            transition={{ duration: 0.55, delay: 0.08 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
           >
             <div className="experience-meta">
-              <span className="experience-period">{profile.education.year}</span>
+              <span>{profile.education.year}</span>
               <h3>{profile.education.degree}</h3>
-              <p className="experience-company">
+              <p>
                 {profile.education.school} · {profile.education.specialization}
               </p>
             </div>
-            <ul className="experience-points">
+            <ul>
               <li>
                 Specializing in Data Science with a focus on software engineering, algorithms, and
-                building production-minded systems.
+                shipping production-minded systems.
               </li>
-              <li>
-                Active on LeetCode and HackerRank, with ongoing competitive practice on CodeChef.
-              </li>
+              <li>Active on LeetCode and HackerRank, with ongoing practice on CodeChef.</li>
             </ul>
           </motion.article>
         </div>

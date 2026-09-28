@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Navbar } from './components/Navbar'
-import { Starfield } from './components/Starfield'
 import { Hero } from './components/Hero'
-import { About } from './components/About'
+import { Statement } from './components/Statement'
 import { Projects } from './components/Projects'
 import { Experience } from './components/Experience'
-import { Skills } from './components/Skills'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
 import './App.css'
@@ -16,12 +14,12 @@ function App() {
   const [booted, setBooted] = useState(false)
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setBooted(true), 80)
+    const timer = window.setTimeout(() => setBooted(true), 60)
     return () => window.clearTimeout(timer)
   }, [])
 
   useEffect(() => {
-    const ids = ['home', 'about', 'projects', 'experience', 'skills', 'contact']
+    const ids = ['home', 'projects', 'experience', 'contact']
     const observers: IntersectionObserver[] = []
 
     ids.forEach((id) => {
@@ -31,7 +29,7 @@ function App() {
         ([entry]) => {
           if (entry.isIntersecting) setActiveSection(id)
         },
-        { rootMargin: '-40% 0px -45% 0px', threshold: 0 },
+        { rootMargin: '-35% 0px -50% 0px', threshold: 0 },
       )
       observer.observe(el)
       observers.push(observer)
@@ -42,24 +40,23 @@ function App() {
 
   return (
     <div className="app-shell">
-      <Starfield />
+      <div className="ambient" aria-hidden="true" />
       <AnimatePresence>
         {!booted && (
           <motion.div
             className="boot-veil"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           />
         )}
       </AnimatePresence>
       <Navbar activeSection={activeSection} />
       <main>
         <Hero />
-        <About />
+        <Statement />
         <Projects />
         <Experience />
-        <Skills />
         <Contact />
       </main>
       <Footer />

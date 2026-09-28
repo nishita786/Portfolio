@@ -1,0 +1,50 @@
+.statement {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.statement-inner {
+  text-align: center;
+  max-width: 920px;
+}
+
+.statement-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4.2vw, 3.1rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  color: var(--polar);
+  margin-bottom: 1.35rem;
+}
+
+.statement-copy {
+  max-width: 42rem;
+  margin: 0 auto 2.5rem;
+  color: var(--polar-muted);
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.statement-logos {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.75rem;
+}
+
+.statement-logos a {
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--polar);
+  opacity: 0.35;
+  font-weight: 600;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+.statement-logos a:hover {
+  opacity: 1;
+  color: var(--emerald);
+}
