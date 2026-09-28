@@ -113,9 +113,9 @@ export const profile = {
     {
       name: 'Sign Language Recognition',
       blurb:
-        'Computer-vision model that recognizes sign language gestures — trained with deep learning to map hand signs to text for more accessible communication.',
-      stack: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'CNN'],
-      href: 'https://github.com/nishita786/Sign-Language-Recognition',
+        'Real-time sign language recognition with MediaPipe hand landmarks, CNN-LSTM and MobileNet-LSTM models, motion features, and live webcam inference.',
+      stack: ['Python', 'MediaPipe', 'TensorFlow', 'CNN-LSTM', 'OpenCV'],
+      href: 'https://github.com/nishita786/sign-language-recognition',
     },
     {
       name: 'KYC / AML Orchestration',
