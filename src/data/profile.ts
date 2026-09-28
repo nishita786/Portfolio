@@ -124,6 +124,13 @@ export const profile = {
       stack: ['Node.js', 'Express', 'MongoDB', 'Docker', 'JWT'],
       href: 'https://github.com/nishita786/kyc-aml-orchestration',
     },
+    {
+      name: 'ZestRoute',
+      blurb:
+        'Delivery analytics platform on AWS S3, Snowflake, SQL, and Power BI for operational visibility and data-driven routing insights.',
+      stack: ['Python', 'AWS S3', 'Snowflake', 'SQL', 'Power BI'],
+      href: 'https://github.com/nishita786/ZestRoute',
+    },
   ],
   skills: {
     languages: ['C++', 'Python', 'JavaScript', 'SQL', 'Java', 'R'],
@@ -208,7 +215,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'Work',
     peek: 'Work',
     description:
-      'Top builds — Lexicon Gate (Self-RAG), deep learning experiments, and KYC/AML orchestration.',
+      'Top builds — Lexicon Gate, deep learning lab, KYC/AML orchestration, and ZestRoute analytics.',
     cta: 'View Projects',
     target: '#projects',
     hue: 205,
