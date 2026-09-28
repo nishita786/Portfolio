@@ -1,6 +1,6 @@
 # Nishita Kumari — Portfolio
 
-A chic, animated personal portfolio inspired by immersive space-landing composition — adapted for a software engineer profile.
+A chic, animated personal portfolio inspired by immersive space-landing composition — adapted for a software engineer profile (abstract luminous orbs instead of planets).
 
 ## Stack
 
@@ -24,4 +24,4 @@ npm run preview
 
 ## Content
 
-Profile data (LinkedIn, GitHub, experience, projects, skills) lives in `src/data/profile.ts`.
+Profile data (LinkedIn, GitHub, LeetCode, HackerRank, experience, projects, skills) lives in `src/data/profile.ts`.

@@ -2,8 +2,8 @@ export const profile = {
   name: 'Nishita Kumari',
   firstName: 'Nishita',
   brand: 'nishita',
-  brandAccent: 'ta',
-  title: 'Data Science',
+  brandAccent: '.dev',
+  title: 'Software Engineer · Data Science',
   location: 'Bengaluru, India',
   email: 'nishitakm786@gmail.com',
   tagline:
@@ -14,7 +14,8 @@ export const profile = {
     linkedin: 'https://www.linkedin.com/in/nishita-kumari-profile',
     github: 'https://github.com/nishita786',
     email: 'mailto:nishitakm786@gmail.com',
-    leetcode: 'https://leetcode.com/u/nishita786/',
+    leetcode: 'https://leetcode.com/u/QgyWXdSCx8/',
+    hackerrank: 'https://www.hackerrank.com/profile/nishitakm786',
     codechef: 'https://www.codechef.com/users/nishita786',
     solutions: 'https://github.com/nishita786/leetcode-solutions',
   },
@@ -47,13 +48,6 @@ export const profile = {
       href: 'https://github.com/nishita786/kyc-aml-orchestration',
     },
     {
-      name: 'MedPal',
-      blurb:
-        'AI medical assistant using NLP and retrieval to interpret symptoms and surface health insights.',
-      stack: ['TypeScript', 'NLP', 'AI'],
-      href: 'https://github.com/nishita786/medpal',
-    },
-    {
       name: 'ZestRoute',
       blurb:
         'Delivery analytics platform on AWS S3, Snowflake, SQL, and Power BI for operational visibility.',
@@ -61,40 +55,67 @@ export const profile = {
       href: 'https://github.com/nishita786/ZestRoute',
     },
     {
-      name: 'Collaborative Whiteboard',
+      name: 'AegisQA',
       blurb:
-        'Multi-user real-time drawing app with React, Node, Express, and WebSockets.',
-      stack: ['React', 'WebSockets', 'MongoDB'],
-      href: 'https://github.com/nishita786',
+        'Autonomous QA agent that explores flows, flags regressions, and reports issues without hand-written scripts.',
+      stack: ['JavaScript', 'Automation', 'AI'],
+      href: 'https://github.com/nishita786/AegisQA-Autonomous-QA-Agent',
     },
     {
-      name: 'AI Document Summarizer',
+      name: 'Bus Reservation',
       blurb:
-        'LangChain + Python + Streamlit pipeline that summarizes large PDFs with LLMs.',
-      stack: ['LangChain', 'Python', 'Streamlit'],
-      href: 'https://github.com/nishita786',
+        'Database-driven booking system with Streamlit, Python, and MySQL — auth, seats, and trip management.',
+      stack: ['Python', 'Streamlit', 'MySQL'],
+      href: 'https://github.com/nishita786/Bus-Reservation',
     },
     {
-      name: 'Credit Risk Model',
+      name: 'NLP Chatbot',
       blurb:
-        'Machine learning pipeline with PyTorch and XGBoost to classify credit risk from financial data.',
-      stack: ['PyTorch', 'XGBoost', 'ML'],
-      href: 'https://github.com/nishita786',
+        'Conversational AI chatbot that understands queries and generates meaningful responses with NLP.',
+      stack: ['Python', 'NLP', 'AI'],
+      href: 'https://github.com/nishita786/chatbot_project',
+    },
+    {
+      name: 'RideIQ',
+      blurb:
+        'Ride analytics experiments exploring demand patterns, routing signals, and operational metrics.',
+      stack: ['Python', 'Analytics'],
+      href: 'https://github.com/nishita786/RideIQ',
     },
   ],
   skills: {
-    languages: ['C++', 'Python', 'JavaScript', 'SQL'],
+    languages: ['C++', 'Python', 'JavaScript', 'SQL', 'Java', 'R'],
     frontend: ['React.js', 'HTML5', 'CSS3'],
     backend: ['Node.js', 'Express.js', 'REST APIs', 'JWT', 'Socket.io'],
-    data: ['MongoDB', 'MySQL', 'PyTorch', 'XGBoost', 'LangChain', 'Power BI'],
+    data: ['MongoDB', 'MySQL', 'PyTorch', 'XGBoost', 'LangChain', 'Power BI', 'Snowflake'],
     tools: ['Docker', 'Git', 'Linux', 'AWS'],
     core: ['DSA', 'OOP', 'DBMS', 'OS', 'Networks', 'System Design'],
   },
   achievements: [
-    { label: 'LeetCode', value: 'Active', detail: 'Problem solving', href: 'https://leetcode.com/u/nishita786/' },
-    { label: 'CodeChef', value: '★', detail: 'Competitive coding', href: 'https://www.codechef.com/users/nishita786' },
-    { label: 'DSA', value: 'Daily', detail: 'Solutions repo', href: 'https://github.com/nishita786/leetcode-solutions' },
-    { label: 'GitHub', value: 'Build', detail: 'Open projects', href: 'https://github.com/nishita786' },
+    {
+      label: 'LeetCode',
+      value: '74',
+      detail: '42E · 26M · 6H',
+      href: 'https://leetcode.com/u/QgyWXdSCx8/',
+    },
+    {
+      label: 'HackerRank',
+      value: '★★★',
+      detail: 'Python · PS · R Basic',
+      href: 'https://www.hackerrank.com/profile/nishitakm786',
+    },
+    {
+      label: 'CodeChef',
+      value: '★',
+      detail: 'Competitive coding',
+      href: 'https://www.codechef.com/users/nishita786',
+    },
+    {
+      label: 'GitHub',
+      value: '13+',
+      detail: 'Public projects',
+      href: 'https://github.com/nishita786',
+    },
   ],
 } as const
 
@@ -105,48 +126,55 @@ export type HeroSlide = {
   description: string
   cta: string
   target: string
-  orbHue: number
+  /** CSS hue for the abstract orb (0–360) */
+  hue: number
+  /** Short side-peek label */
+  peek: string
 }
 
 export const heroSlides: HeroSlide[] = [
   {
     id: 'about',
-    label: 'Data Science',
+    label: 'Profile',
     title: 'Nishita',
+    peek: 'About',
     description:
-      'CSE student specializing in Data Science — crafting backends, intelligent systems, and clean problem-solving.',
+      'CSE · Data Science at MVJCE. I craft backends, intelligent systems, and clean problem-solving — open to SDE and data roles.',
     cta: 'Get Started',
     target: '#about',
-    orbHue: 160,
+    hue: 190,
   },
   {
     id: 'work',
     label: 'Selected',
     title: 'Work',
+    peek: 'Work',
     description:
-      'From KYC orchestration and AI assistants to analytics platforms — projects that turn ideas into systems.',
+      'From KYC orchestration and autonomous QA to analytics platforms — projects that turn ideas into reliable systems.',
     cta: 'View Projects',
     target: '#projects',
-    orbHue: 155,
+    hue: 205,
   },
   {
     id: 'path',
     label: 'Career',
     title: 'Path',
+    peek: 'Path',
     description:
-      'Backend intern building REST APIs, auth, and reliable services — open to SDE and data roles.',
+      'Backend intern shipping REST APIs, auth, and durable services — with DSA practice across LeetCode and HackerRank.',
     cta: 'See Experience',
     target: '#experience',
-    orbHue: 168,
+    hue: 175,
   },
   {
     id: 'reach',
     label: 'Connect',
     title: 'Reach',
+    peek: 'Reach',
     description:
       'Let’s talk systems, data, or your next product. Always happy to connect with builders and recruiters.',
     cta: 'Say Hello',
     target: '#contact',
-    orbHue: 150,
+    hue: 220,
   },
 ]

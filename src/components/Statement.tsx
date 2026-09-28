@@ -4,17 +4,26 @@ import './Statement.css'
 
 const platforms = [
   { label: 'LeetCode', href: profile.links.leetcode },
-  { label: 'CodeChef', href: profile.links.codechef },
+  { label: 'HackerRank', href: profile.links.hackerrank },
   { label: 'GitHub', href: profile.links.github },
   { label: 'LinkedIn', href: profile.links.linkedin },
+  { label: 'CodeChef', href: profile.links.codechef },
   { label: 'Solutions', href: profile.links.solutions },
-  { label: 'MVJCE', href: 'https://www.mvjce.edu.in/' },
 ]
 
 export function Statement() {
   return (
     <section className="section statement" id="about">
       <div className="container statement-inner">
+        <motion.p
+          className="statement-eyebrow"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.45 }}
+        >
+          About
+        </motion.p>
         <motion.h2
           className="statement-heading"
           initial={{ opacity: 0, y: 20 }}
@@ -35,11 +44,29 @@ export function Statement() {
         </motion.p>
 
         <motion.ul
+          className="statement-stats"
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.12 }}
+        >
+          {profile.achievements.map((item) => (
+            <li key={item.label}>
+              <a href={item.href} target="_blank" rel="noreferrer">
+                <span className="statement-stat-value">{item.value}</span>
+                <span className="statement-stat-label">{item.label}</span>
+                <span className="statement-stat-detail">{item.detail}</span>
+              </a>
+            </li>
+          ))}
+        </motion.ul>
+
+        <motion.ul
           className="statement-logos"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.15 }}
+          transition={{ delay: 0.18 }}
         >
           {platforms.map((item) => (
             <li key={item.label}>

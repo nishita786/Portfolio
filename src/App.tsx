@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
+import { Starfield } from './components/Starfield'
 import { Statement } from './components/Statement'
 import { Projects } from './components/Projects'
 import { Experience } from './components/Experience'
@@ -12,14 +13,25 @@ import './App.css'
 function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [booted, setBooted] = useState(false)
+  const [mouse, setMouse] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setBooted(true), 60)
+    const timer = window.setTimeout(() => setBooted(true), 80)
     return () => window.clearTimeout(timer)
   }, [])
 
   useEffect(() => {
-    const ids = ['home', 'projects', 'experience', 'contact']
+    const onMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 2
+      const y = (e.clientY / window.innerHeight - 0.5) * 2
+      setMouse({ x, y })
+    }
+    window.addEventListener('mousemove', onMove)
+    return () => window.removeEventListener('mousemove', onMove)
+  }, [])
+
+  useEffect(() => {
+    const ids = ['home', 'about', 'projects', 'experience', 'contact']
     const observers: IntersectionObserver[] = []
 
     ids.forEach((id) => {
@@ -40,6 +52,7 @@ function App() {
 
   return (
     <div className="app-shell">
+      <Starfield mouseX={mouse.x} mouseY={mouse.y} />
       <div className="ambient" aria-hidden="true" />
       <AnimatePresence>
         {!booted && (
@@ -47,13 +60,13 @@ function App() {
             className="boot-veil"
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           />
         )}
       </AnimatePresence>
       <Navbar activeSection={activeSection} />
       <main>
-        <Hero />
+        <Hero mouseX={mouse.x} mouseY={mouse.y} />
         <Statement />
         <Projects />
         <Experience />

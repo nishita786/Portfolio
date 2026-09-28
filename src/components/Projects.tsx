@@ -6,6 +6,15 @@ export function Projects() {
   return (
     <section className="section projects" id="projects">
       <div className="container">
+        <motion.p
+          className="projects-eyebrow"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.45 }}
+        >
+          Selected
+        </motion.p>
         <motion.h2
           className="projects-heading"
           initial={{ opacity: 0, y: 16 }}
@@ -13,7 +22,7 @@ export function Projects() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.45 }}
         >
-          what I do
+          Work
         </motion.h2>
 
         <div className="projects-grid">
@@ -23,18 +32,21 @@ export function Projects() {
               href={project.href}
               target="_blank"
               rel="noreferrer"
-              className="project-card"
-              initial={{ opacity: 0, y: 16 }}
+              className="project-row"
+              initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.4, delay: i * 0.04 }}
+              transition={{ duration: 0.45, delay: i * 0.04 }}
             >
-              <div className="project-thumb" aria-hidden="true">
-                <span>{String(i + 1).padStart(2, '0')}</span>
-              </div>
+              <span className="project-index">{String(i + 1).padStart(2, '0')}</span>
               <div className="project-body">
                 <h3>{project.name}</h3>
-                <p>{project.stack.join(' · ')}</p>
+                <p>{project.blurb}</p>
+                <ul>
+                  {project.stack.map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
               </div>
               <span className="project-go" aria-hidden="true">
                 →

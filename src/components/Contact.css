@@ -1,69 +1,90 @@
 .contact {
-  padding-bottom: 4rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
 }
 
 .contact-inner {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 760px;
+}
+
+.contact-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 0.65rem;
 }
 
 .contact-heading {
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.75rem;
-  color: var(--polar);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 0.85rem;
+}
+
+.contact-copy {
+  color: var(--ice-muted);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.contact-email {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #fff;
+  margin-bottom: 2.25rem;
+  border-bottom: 1px solid rgba(64, 224, 208, 0.35);
+  padding-bottom: 0.2rem;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-email:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
 }
 
 .contact-socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 1.35rem;
   justify-content: center;
-  padding: 1.2rem 1.6rem;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(6, 214, 160, 0.35);
-  background: rgba(11, 31, 26, 0.9);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  gap: 0.75rem;
 }
 
 .contact-social {
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  min-width: 4rem;
-  color: var(--polar-dim);
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  transition: color 0.25s ease, transform 0.25s ease;
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ice-muted);
+  font-size: 0.85rem;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .contact-social:hover {
-  color: var(--emerald);
-  transform: translateY(-3px);
+  color: #fff;
+  border-color: rgba(64, 224, 208, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }
 
 .contact-social-mark {
-  width: 2.7rem;
-  height: 2.7rem;
-  border-radius: 0.95rem;
   display: grid;
   place-items: center;
-  background: linear-gradient(145deg, rgba(6, 214, 160, 0.28), rgba(6, 31, 26, 0.95));
-  border: 1px solid rgba(6, 214, 160, 0.35);
-  color: var(--emerald);
-  font-size: 0.8rem;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 50%;
+  background: rgba(64, 224, 208, 0.12);
+  color: var(--cyan);
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0;
-}
-
-@media (max-width: 640px) {
-  .contact-socials {
-    border-radius: 1.25rem;
-    width: 100%;
-  }
 }

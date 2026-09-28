@@ -1,9 +1,11 @@
+import { profile } from '../data/profile'
 import './Navbar.css'
 
 const links = [
-  { id: 'projects', label: 'See my work', icon: '→' },
-  { id: 'experience', label: 'My path', icon: '▣' },
-  { id: 'contact', label: 'Contact me', icon: '✓' },
+  { id: 'about', label: 'About' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'contact', label: 'Contact' },
 ]
 
 type NavbarProps = {
@@ -13,20 +15,28 @@ type NavbarProps = {
 export function Navbar({ activeSection }: NavbarProps) {
   return (
     <header className="nav">
-      <nav className="nav-pills" aria-label="Primary">
-        {links.map((link) => (
-          <a
-            key={link.id}
-            href={`#${link.id}`}
-            className={activeSection === link.id ? 'is-active' : undefined}
-          >
-            <span className="nav-pill-icon" aria-hidden="true">
-              {link.icon}
-            </span>
-            {link.label}
-          </a>
-        ))}
-      </nav>
+      <div className="nav-inner">
+        <a href="#home" className="nav-brand" aria-label={profile.name}>
+          {profile.brand}
+          <span>{profile.brandAccent}</span>
+        </a>
+
+        <nav className="nav-links" aria-label="Primary">
+          {links.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className={activeSection === link.id || (activeSection === 'home' && link.id === 'about') ? 'is-active' : undefined}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <a className="nav-cta" href={profile.links.email}>
+          Contact Me
+        </a>
+      </div>
     </header>
   )
 }

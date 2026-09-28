@@ -6,6 +6,15 @@ export function Experience() {
   return (
     <section className="section experience" id="experience">
       <div className="container">
+        <motion.p
+          className="experience-eyebrow"
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.45 }}
+        >
+          Career
+        </motion.p>
         <motion.h2
           className="experience-heading"
           initial={{ opacity: 0, y: 16 }}
@@ -13,7 +22,7 @@ export function Experience() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.45 }}
         >
-          my path
+          Path
         </motion.h2>
 
         <div className="experience-list">
@@ -58,7 +67,10 @@ export function Experience() {
                 Specializing in Data Science with a focus on software engineering, algorithms, and
                 shipping production-minded systems.
               </li>
-              <li>Active on LeetCode and CodeChef, with solutions tracked on GitHub.</li>
+              <li>
+                Active on LeetCode (74 solved) and HackerRank (Python ★★★, Problem Solving ★★, R
+                Basic cert).
+              </li>
             </ul>
           </motion.article>
         </div>

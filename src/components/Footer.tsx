@@ -6,7 +6,8 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <p className="footer-brand">
-          nishi<span>ta</span>
+          {profile.brand}
+          <span>{profile.brandAccent}</span>
         </p>
         <p className="footer-copy">
           © 2026 {profile.name} · {profile.education.school}
