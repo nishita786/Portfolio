@@ -106,6 +106,8 @@ export const profile = {
     {
       name: 'Lexicon Gate',
       subtitle: 'Evidence-Grounded Self-RAG Research Workspace',
+      image: '/projects/lexicon-gate.png',
+      imageAlt: 'Glowing cyan gateway with floating research documents linked by a retrieval network',
       points: [
         'Built an AI-powered research workspace for asking questions over a personal library of academic papers and documents.',
         'Implemented a Self-RAG pipeline that retrieves relevant evidence before generating an answer.',
@@ -131,6 +133,8 @@ export const profile = {
     {
       name: 'Sign Language Recognition',
       subtitle: 'Real-Time Sign Language Recognition System',
+      image: '/projects/sign-language.png',
+      imageAlt: 'Wireframe hand with glowing joint landmarks for real-time gesture recognition',
       points: [
         'Developed a computer-vision and deep-learning system for recognizing sign language gestures and converting them into text.',
         'Processed hand and gesture information from visual input to extract meaningful features for recognition.',
@@ -148,6 +152,8 @@ export const profile = {
     {
       name: 'KYC / AML Orchestration',
       subtitle: 'Enterprise KYC / AML Orchestration Platform',
+      image: '/projects/kyc-aml.png',
+      imageAlt: 'Identity shield connected to verification nodes and secure workflow adapters',
       points: [
         'Built a backend platform for orchestrating Know Your Customer (KYC) and Anti-Money Laundering (AML) verification workflows.',
         'Designed workflow orchestration to coordinate different verification stages and external service providers.',
@@ -166,6 +172,8 @@ export const profile = {
     {
       name: 'ZestRoute',
       subtitle: 'Cloud-Based Delivery Analytics Platform',
+      image: '/projects/zestroute.png',
+      imageAlt: 'Delivery analytics network with glowing routes and holographic dashboard charts',
       points: [
         'Built a data engineering and analytics platform for analyzing delivery and operational performance.',
         'Designed a cloud-based data pipeline using AWS S3 as a scalable data storage layer.',
