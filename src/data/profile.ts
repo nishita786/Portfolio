@@ -92,9 +92,9 @@ export const profile = {
   },
   achievements: [
     { label: 'LeetCode', value: 'Active', detail: 'Problem solving', href: 'https://leetcode.com/u/nishita786/' },
-    { label: 'HackerRank', value: 'Practice', detail: 'Coding tracks', href: 'https://github.com/nishita786/leetcode-solutions' },
     { label: 'CodeChef', value: '★', detail: 'Competitive coding', href: 'https://www.codechef.com/users/nishita786' },
     { label: 'DSA', value: 'Daily', detail: 'Solutions repo', href: 'https://github.com/nishita786/leetcode-solutions' },
+    { label: 'GitHub', value: 'Build', detail: 'Open projects', href: 'https://github.com/nishita786' },
   ],
 } as const
 
