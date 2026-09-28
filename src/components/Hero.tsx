@@ -57,13 +57,13 @@ export function Hero({ mouseX, mouseY }: HeroProps) {
             </defs>
 
             <g className="hero-thought-links">
-              <path d="M90 80 L210 160" />
-              <path d="M70 210 L210 160" />
-              <path d="M110 300 L210 160" />
-              <path className="is-main" d="M210 160 L390 210 L570 210 L750 210 L910 210" />
+              <path d="M90 90 L220 210" />
+              <path d="M90 210 L220 210" />
+              <path d="M90 330 L220 210" />
+              <path className="is-main" d="M220 210 L390 210 L560 210 L730 210 L900 210" />
               <path d="M390 210 L390 320" />
-              <path d="M570 210 L570 100" />
-              <path d="M750 210 L750 320" />
+              <path d="M560 210 L560 100" />
+              <path d="M730 210 L730 320" />
             </g>
 
             <g className="hero-thought-packets">
@@ -71,71 +71,83 @@ export function Hero({ mouseX, mouseY }: HeroProps) {
                 <animateMotion
                   dur="5s"
                   repeatCount="indefinite"
-                  path="M210 160 L390 210 L570 210 L750 210 L910 210"
+                  path="M220 210 L390 210 L560 210 L730 210 L900 210"
                 />
               </circle>
               <circle r="2.5" fill="url(#flow)">
                 <animateMotion
-                  dur="6.2s"
-                  begin="1.4s"
+                  dur="6s"
+                  begin="1.2s"
                   repeatCount="indefinite"
-                  path="M90 80 L210 160 L390 210"
+                  path="M90 90 L220 210 L390 210"
                 />
               </circle>
               <circle r="2.5" fill="url(#flow)">
                 <animateMotion
-                  dur="5.6s"
-                  begin="0.8s"
+                  dur="5.4s"
+                  begin="0.7s"
                   repeatCount="indefinite"
-                  path="M110 300 L210 160 L390 210 L570 210"
+                  path="M90 330 L220 210 L390 210 L560 210"
                 />
               </circle>
             </g>
 
             <g className="hero-thought-nodes">
-              <circle className="is-seed" cx="90" cy="80" r="4" />
-              <circle className="is-seed" cx="70" cy="210" r="3.5" />
-              <circle className="is-seed" cx="110" cy="300" r="4" />
-              <circle className="is-hot" cx="210" cy="160" r="7" />
+              <circle className="is-seed" cx="90" cy="90" r="4" />
+              <circle className="is-seed" cx="90" cy="210" r="3.5" />
+              <circle className="is-seed" cx="90" cy="330" r="4" />
+              <circle className="is-hot" cx="220" cy="210" r="7" />
               <circle className="is-hot" cx="390" cy="210" r="8" />
-              <circle className="is-hot" cx="570" cy="210" r="8" />
-              <circle className="is-hot" cx="750" cy="210" r="8" />
-              <circle className="is-core" cx="910" cy="210" r="10" />
+              <circle className="is-hot" cx="560" cy="210" r="8" />
+              <circle className="is-hot" cx="730" cy="210" r="8" />
+              <circle className="is-core" cx="900" cy="210" r="10" />
               <circle cx="390" cy="320" r="4" />
-              <circle cx="570" cy="100" r="4" />
-              <circle cx="750" cy="320" r="4" />
+              <circle cx="560" cy="100" r="4" />
+              <circle cx="730" cy="320" r="4" />
             </g>
 
             <g className="hero-thought-rings">
-              <circle cx="210" cy="160" r="20" />
-              <circle cx="570" cy="210" r="24" />
-              <circle cx="910" cy="210" r="28" />
+              <circle cx="220" cy="210" r="20" />
+              <circle cx="560" cy="210" r="24" />
+              <circle cx="900" cy="210" r="28" />
+            </g>
+
+            <g className="hero-thought-text">
+              <text x="90" y="72" textAnchor="middle">
+                curiosity
+              </text>
+              <text x="90" y="192" textAnchor="middle">
+                questions
+              </text>
+              <text x="90" y="312" textAnchor="middle">
+                signals
+              </text>
+              <text className="is-strong" x="220" y="250" textAnchor="middle">
+                thought
+              </text>
+              <text className="is-strong" x="390" y="250" textAnchor="middle">
+                data
+              </text>
+              <text className="is-strong" x="560" y="250" textAnchor="middle">
+                model
+              </text>
+              <text className="is-strong" x="730" y="250" textAnchor="middle">
+                system
+              </text>
+              <text className="is-core" x="900" y="250" textAnchor="middle">
+                insight
+              </text>
+              <text x="390" y="348" textAnchor="middle">
+                clean
+              </text>
+              <text x="560" y="84" textAnchor="middle">
+                learn
+              </text>
+              <text x="730" y="348" textAnchor="middle">
+                ship
+              </text>
             </g>
           </svg>
-
-          <div className="hero-thought-labels">
-            <span style={{ left: '8%', top: '12%' }}>curiosity</span>
-            <span style={{ left: '4%', top: '46%' }}>questions</span>
-            <span style={{ left: '8%', top: '72%' }}>signals</span>
-            <span className="is-strong" style={{ left: '18%', top: '28%' }}>
-              thought
-            </span>
-            <span className="is-strong" style={{ left: '34%', top: '40%' }}>
-              data
-            </span>
-            <span className="is-strong" style={{ left: '51%', top: '40%' }}>
-              model
-            </span>
-            <span className="is-strong" style={{ left: '68%', top: '40%' }}>
-              system
-            </span>
-            <span className="is-core" style={{ left: '84%', top: '38%' }}>
-              insight
-            </span>
-            <span style={{ left: '34%', top: '74%' }}>clean</span>
-            <span style={{ left: '51%', top: '14%' }}>learn</span>
-            <span style={{ left: '68%', top: '74%' }}>ship</span>
-          </div>
         </div>
       </div>
 
