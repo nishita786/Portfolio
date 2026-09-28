@@ -142,9 +142,8 @@ export const skillGroups: SkillGroup[] = [
       },
       {
         name: 'GitHub',
-        icon: d('github/github-original.svg'),
+        icon: '/skills/github.svg',
         href: 'https://github.com/',
-        invert: true,
       },
       {
         name: 'Docker',
@@ -180,11 +179,6 @@ export const skillGroups: SkillGroup[] = [
         name: 'Node.js',
         icon: d('nodejs/nodejs-original.svg'),
         href: 'https://nodejs.org/',
-      },
-      {
-        name: 'AWS',
-        icon: d('amazonwebservices/amazonwebservices-plain-wordmark.svg'),
-        href: 'https://aws.amazon.com/',
       },
       {
         name: 'Anaconda',

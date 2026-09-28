@@ -23,7 +23,7 @@ export const profile = {
     'Thanks for stopping by — feel free to explore my work!',
   ],
   links: {
-    linkedin: 'https://www.linkedin.com/in/nishita-kumari-profile',
+    linkedin: 'https://www.linkedin.com/in/nishitakr/',
     github: 'https://github.com/nishita786',
     email: 'mailto:nishitakm786@gmail.com',
     gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('nishitakm786@gmail.com')}`,
