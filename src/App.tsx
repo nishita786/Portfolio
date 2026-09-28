@@ -32,7 +32,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    const ids = ['home', 'about', 'projects', 'skills', 'experience', 'contact']
+    const ids = ['home', 'overview', 'projects', 'skills', 'experience', 'contact']
     const observers: IntersectionObserver[] = []
 
     ids.forEach((id) => {

@@ -2,18 +2,9 @@ import { motion } from 'framer-motion'
 import { profile } from '../data/profile'
 import './Statement.css'
 
-const platforms = [
-  { label: 'LeetCode', href: profile.links.leetcode },
-  { label: 'HackerRank', href: profile.links.hackerrank },
-  { label: 'GitHub', href: profile.links.github },
-  { label: 'LinkedIn', href: profile.links.linkedin },
-  { label: 'CodeChef', href: profile.links.codechef },
-  { label: 'Solutions', href: profile.links.solutions },
-]
-
 export function Statement() {
   return (
-    <section className="section statement" id="about">
+    <section className="section statement" id="overview">
       <div className="container statement-inner">
         <motion.p
           className="statement-eyebrow"
@@ -22,7 +13,7 @@ export function Statement() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.45 }}
         >
-          About
+          Introduction
         </motion.p>
         <motion.h2
           className="statement-heading"
@@ -31,62 +22,23 @@ export function Statement() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.55 }}
         >
-          Hi, I&apos;m {profile.firstName} — turning complex problems into clean, reliable systems.
+          Overview
         </motion.h2>
-        <motion.p
-          className="statement-copy"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.55, delay: 0.08 }}
-        >
-          {profile.summary}
-        </motion.p>
-        <motion.p
-          className="statement-copy statement-copy--secondary"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.55, delay: 0.12 }}
-        >
-          What motivates me most is asking <em>why</em> before jumping into <em>how</em> — then
-          shipping backends, data pipelines, and AI-assisted tools that other builders can trust.
-          {` ${profile.tagline}`}
-        </motion.p>
 
-        <motion.ul
-          className="statement-stats"
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.12 }}
-        >
-          {profile.achievements.map((item) => (
-            <li key={item.label}>
-              <a href={item.href} target="_blank" rel="noreferrer">
-                <span className="statement-stat-value">{item.value}</span>
-                <span className="statement-stat-label">{item.label}</span>
-                <span className="statement-stat-detail">{item.detail}</span>
-              </a>
-            </li>
+        <div className="statement-body">
+          {profile.overview.map((paragraph, i) => (
+            <motion.p
+              key={paragraph}
+              className={`statement-copy${i === profile.overview.length - 1 ? ' statement-copy--closing' : ''}`}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: Math.min(i * 0.04, 0.28) }}
+            >
+              {paragraph}
+            </motion.p>
           ))}
-        </motion.ul>
-
-        <motion.ul
-          className="statement-logos"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.18 }}
-        >
-          {platforms.map((item) => (
-            <li key={item.label}>
-              <a href={item.href} target="_blank" rel="noreferrer">
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </motion.ul>
+        </div>
       </div>
     </section>
   )

@@ -2,7 +2,7 @@ import { profile } from '../data/profile'
 import './Navbar.css'
 
 const links = [
-  { id: 'about', label: 'About' },
+  { id: 'overview', label: 'Overview' },
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
   { id: 'experience', label: 'Experience' },

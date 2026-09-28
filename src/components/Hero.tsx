@@ -119,7 +119,7 @@ export function Hero({ mouseX, mouseY }: HeroProps) {
         </AnimatePresence>
       </motion.div>
 
-      <a className="hero-scroll" href="#about" aria-label="Scroll to about">
+      <a className="hero-scroll" href="#overview" aria-label="Scroll to overview">
         <span aria-hidden="true">↓</span>
       </a>
     </section>

@@ -10,6 +10,18 @@ export const profile = {
     'Building with data, backends, and sharp problem-solving — from ML pipelines to clean APIs.',
   summary:
     'B.E. Computer Science and Engineering student specializing in Data Science at MVJ College of Engineering. Passionate about software engineering, data systems, and machine learning. Open to SDE / Data / Backend roles.',
+  overview: [
+    'Hi, I’m Nishita — a Computer Science specialization in Data Science student who enjoys turning data, ideas, and complex problems into practical solutions.',
+    'I’m particularly interested in Data Analyst, Artificial Intelligence, Machine Learning, and backend development. I enjoy understanding how things work behind the scenes — from collecting and transforming data to building intelligent systems that can actually use it.',
+    'Throughout my academic journey, I’ve worked on projects involving data pipelines, analytics platforms, AI-powered applications, backend systems, and machine learning models. I like taking an idea from a rough concept and turning it into something functional, whether that means designing an API, building a data pipeline, training a model, or creating an interface that people can actually use.',
+    'What interests me most is the intersection of data and intelligent systems. I enjoy working with technologies such as Python, SQL, Java, MongoDB, Snowflake, AWS, Docker, Power BI, TensorFlow, LangChain, and modern backend frameworks, while continuously exploring new tools and approaches.',
+    'I’m someone who believes that building good technology starts with asking the right questions. Before thinking about how to build something, I like understanding why it needs to be built, what problem it solves, and how it can be made better.',
+    'I also enjoy participating in hackathons, technical projects, and collaborative development, because they push me to work beyond textbook concepts and solve problems under real constraints. Some of my work has explored areas such as Self-RAG and document intelligence, fintech systems, delivery analytics, AI applications, and data-driven decision making.',
+    'Outside academics, you’ll usually find me experimenting with a new project, learning a technology I haven’t worked with before, practicing problem-solving, or trying to turn a random idea into something that actually works. Sometimes the idea works perfectly. Sometimes the code decides otherwise. 😄',
+    'I’m continuously learning and building toward a career where I can work on data-intensive and intelligent systems that solve meaningful real-world problems.',
+    'This portfolio is a collection of the projects, experiments, challenges, and lessons that have shaped that journey.',
+    'Thanks for stopping by — feel free to explore my work!',
+  ],
   links: {
     linkedin: 'https://www.linkedin.com/in/nishita-kumari-profile',
     github: 'https://github.com/nishita786',
@@ -156,7 +168,7 @@ export const heroSlides: HeroSlide[] = [
     peek: 'About',
     description: '',
     cta: '',
-    target: '#about',
+    target: '#overview',
     hue: 190,
     intro: true,
   },
