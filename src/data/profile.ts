@@ -104,46 +104,25 @@ export const profile = {
   ],
   projects: [
     {
+      name: 'Lexicon Gate',
+      blurb:
+        'Evidence-grounded Self-RAG research workspace — hybrid retrieval, claim verification, adaptive retrieval, and cited answers over a user’s paper library.',
+      stack: ['React', 'FastAPI', 'LangChain', 'Self-RAG', 'Python'],
+      href: 'https://github.com/nishita786/Lexicon-gate',
+    },
+    {
+      name: 'Deep Learning Lab',
+      blurb:
+        'Hands-on deep learning experiments spanning feed-forward nets, CNNs on MNIST/Fashion-MNIST, and BLIP image captioning with TensorFlow, Keras, and Transformers.',
+      stack: ['Python', 'TensorFlow', 'Keras', 'PyTorch', 'Transformers'],
+      href: 'https://github.com/nishita786/dl',
+    },
+    {
       name: 'KYC / AML Orchestration',
       blurb:
-        'Distributed fintech compliance platform with microservices, async messaging, and secure authentication.',
-      stack: ['Node.js', 'Microservices', 'Auth'],
+        'Enterprise-style fintech orchestration for KYC and AML — JWT auth, vendor adapters, state-machine workflows, audit logs, and Dockerized REST APIs.',
+      stack: ['Node.js', 'Express', 'MongoDB', 'Docker', 'JWT'],
       href: 'https://github.com/nishita786/kyc-aml-orchestration',
-    },
-    {
-      name: 'ZestRoute',
-      blurb:
-        'Delivery analytics platform on AWS S3, Snowflake, SQL, and Power BI for operational visibility.',
-      stack: ['Python', 'Snowflake', 'Power BI'],
-      href: 'https://github.com/nishita786/ZestRoute',
-    },
-    {
-      name: 'AegisQA',
-      blurb:
-        'Autonomous QA agent that explores flows, flags regressions, and reports issues without hand-written scripts.',
-      stack: ['JavaScript', 'Automation', 'AI'],
-      href: 'https://github.com/nishita786/AegisQA-Autonomous-QA-Agent',
-    },
-    {
-      name: 'Bus Reservation',
-      blurb:
-        'Database-driven booking system with Streamlit, Python, and MySQL — auth, seats, and trip management.',
-      stack: ['Python', 'Streamlit', 'MySQL'],
-      href: 'https://github.com/nishita786/Bus-Reservation',
-    },
-    {
-      name: 'NLP Chatbot',
-      blurb:
-        'Conversational AI chatbot that understands queries and generates meaningful responses with NLP.',
-      stack: ['Python', 'NLP', 'AI'],
-      href: 'https://github.com/nishita786/chatbot_project',
-    },
-    {
-      name: 'RideIQ',
-      blurb:
-        'Ride analytics experiments exploring demand patterns, routing signals, and operational metrics.',
-      stack: ['Python', 'Analytics'],
-      href: 'https://github.com/nishita786/RideIQ',
     },
   ],
   skills: {
@@ -229,7 +208,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'Work',
     peek: 'Work',
     description:
-      'From KYC orchestration and autonomous QA to analytics platforms — projects that turn ideas into reliable systems.',
+      'Top builds — Lexicon Gate (Self-RAG), deep learning experiments, and KYC/AML orchestration.',
     cta: 'View Projects',
     target: '#projects',
     hue: 205,
